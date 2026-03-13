@@ -6,72 +6,63 @@
     <style>
         body { background-color: #ffffff; color: #000000; font-family: arial, sans-serif; margin: 0; padding: 0; }
         a { color: #0000cc; text-decoration: underline; cursor: pointer; }
-        .top-nav { padding: 8px 20px; font-size: 13px; background: #fff; border-bottom: 1px solid #ccc; display: flex; gap: 15px; }
-        .top-nav b { color: #000; }
-        .top-nav a { text-decoration: none; color: #000; }
+        .top-nav { padding: 8px 20px; font-size: 13px; background: #f1f1f1; border-bottom: 1px solid #ccc; display: flex; gap: 15px; align-items: center; }
+        .hot-link { font-weight: bold; color: #d93025 !important; text-decoration: none !important; }
         .header-main { text-align: center; padding-top: 20px; }
         .google-logo { font-size: 50px; font-weight: bold; font-family: 'Times New Roman', serif; }
         .g-blue { color: #4285f4; } .g-red { color: #ea4335; } .g-yellow { color: #fbbc05; } .g-green { color: #34a853; }
-        .briefing-area { text-align: center; margin: 15px 0; }
-        .briefing-box { width: 50%; padding: 12px; border: 1px solid #7f9db9; font-size: 14px; background: #fff; display: inline-block; text-align: left; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); }
-        .goog-btn { padding: 5px 15px; background: #f8f9fa; border: 1px solid #ccc; font-size: 13px; cursor: pointer; margin: 10px 5px; }
-
-        .container { max-width: 1500px; margin: 10px auto; display: grid; grid-template-columns: 1fr 1.8fr 1fr; gap: 15px; padding: 0 20px; }
+        .briefing-box { width: 60%; padding: 12px; border: 1px solid #7f9db9; font-size: 14px; background: #fff; display: inline-block; text-align: left; }
+        .container { max-width: 1600px; margin: 10px auto; display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 15px; padding: 0 20px; }
         .gadget { border: 1px solid #bbccff; background: #fff; margin-bottom: 15px; font-size: 12px; }
         .gadget-title { background: #e5ecf9; color: #3366cc; font-weight: bold; padding: 6px; border-bottom: 1px solid #bbccff; }
         .gadget-content { padding: 10px; }
-
         .fin-table { width: 100%; border-collapse: collapse; }
-        .fin-table th { text-align: left; color: #666; font-weight: normal; border-bottom: 1px solid #ddd; padding: 5px; }
-        .fin-table td { padding: 8px 5px; border-bottom: 1px solid #eee; }
-        .acct-header { background: #f9f9f9; font-weight: bold; color: #555; font-size: 11px; }
-        .ticker { color: #0000cc; font-weight: bold; }
-        .pos { color: #008000; } .neg { color: #cc0000; }
+        .fin-table td { padding: 6px 5px; border-bottom: 1px solid #eee; }
+        .acct-header { background: #f9f9f9; font-weight: bold; color: #666; font-size: 10px; padding: 4px; }
         .val { text-align: right; font-weight: bold; font-family: 'Courier New', monospace; }
+        .pos { color: #008000; } .neg { color: #cc0000; }
     </style>
 </head>
 <body onload="runAudit()">
 
 <div class="top-nav">
-    <b>Sovereign</b> 
-    <a href="https://www.google.com/finance/quote/.IXIC:INDEXNASDAQ" target="_blank">NASDAQ</a> 
-    <a href="https://news.google.com" target="_blank">News</a> 
-    <a href="https://client.schwab.com/app/accounts/positions/#/" target="_blank">Schwab</a> 
-    <a href="https://digitalomni.navyfederal.org/signin/?NFCUSIGNOFF=2" target="_blank">NFCU</a>
+    <b>Command:</b> 
+    <a class="hot-link" href="https://client.schwab.com/app/accounts/positions/#/" target="_blank">SCHWAB LOGIN</a> |
+    <a class="hot-link" href="https://digitalomni.navyfederal.org/signin/?NFCUSIGNOFF=2" target="_blank">NFCU LOGIN</a> |
+    <a href="https://github.com/edwardzahnle-commits/Kingofthehill/settings" target="_blank">GITHUB SETTINGS</a>
 </div>
 
 <div class="header-main">
-    <div class="google-logo">
-        <span class="g-blue">Z</span><span class="g-red">a</span><span class="g-yellow">h</span><span class="g-blue">n</span><span class="g-green">l</span><span class="g-red">e</span>
-    </div>
-    <div class="briefing-area">
-        <div id="execBrief" class="briefing-box">Loading Sovereign Intelligence...</div><br>
-        <button class="goog-btn" onclick="runAudit()">Sovereign Update</button>
-        <button class="goog-btn" onclick="window.open('https://www.google.com/search?q=asotin+county+housing+market+stats+2026')">I'm Feeling Lucky</button>
-    </div>
+    <div class="google-logo"><span class="g-blue">Z</span><span class="g-red">a</span><span class="g-yellow">h</span><span class="g-blue">n</span><span class="g-green">l</span><span class="g-red">e</span></div>
+    <div id="execBrief" class="briefing-box" style="margin-top:15px">Auditing Complete Sovereign Position (5 Certificates Found)...</div>
 </div>
 
 <div class="container">
     <div class="col">
         <div class="gadget">
-            <div class="gadget-title">Banking & Liquid Shields</div>
+            <div class="gadget-title">Navy Federal: Liquid Cash</div>
             <div class="gadget-content">
                 <table class="fin-table">
-                    <tr><td>NFCU Checking (...904)</td><td class="val">$2,126.52</td></tr>
-                    <tr><td>NFCU Savings</td><td class="val">$1,820.38</td></tr>
-                    <tr><td>Judy's Strategic Capital</td><td class="val pos">$76,600.98</td></tr>
-                    <tr><td>NFCU CD Principal (5%)</td><td class="val">$45,000.00</td></tr>
-                    <tr style="background:#eef"><td><b>Total Liquid Assets</b></td><td class="val pos">$125,547.88</td></tr>
+                    <tr><td>EveryDay Checking - 1104</td><td class="val">$2,126.52</td></tr>
+                    <tr><td>Easy Checking - 8430 (Judy)</td><td class="val">$43,665.54</td></tr>
+                    <tr><td>Membership Savings - 4170</td><td class="val">$600.10</td></tr>
+                    <tr><td>Judy's Savings - 9984</td><td class="val">$1,220.28</td></tr>
+                    <tr style="background:#eef"><td><b>Total Liquidity</b></td><td class="val pos">$47,612.44</td></tr>
                 </table>
             </div>
         </div>
         <div class="gadget">
-            <div class="gadget-title">Income Velocity</div>
+            <div class="gadget-title">Navy Federal: 5 Certificates</div>
             <div class="gadget-content">
                 <table class="fin-table">
-                    <tr><td>VA Deposit (1st)</td><td class="val pos">+$2,214.00</td></tr>
-                    <tr><td>Judy SS (3rd Wed)</td><td class="val pos">+$1,450.00</td></tr>
-                    <tr><td>CD Interest (Accrued)</td><td class="val pos">+$265.15</td></tr>
+                    <tr class="acct-header"><td colspan="2">EDWARD'S HOLDINGS</td></tr>
+                    <tr><td>CERT - 6701</td><td class="val">$10.09</td></tr>
+                    <tr><td>EasyStart - 6704</td><td class="val">$3,012.27</td></tr>
+                    <tr><td>Spec 13 Mo - 6703</td><td class="val">$4,218.47</td></tr>
+                    <tr class="acct-header"><td colspan="2">JUDY'S HOLDINGS</td></tr>
+                    <tr><td>EasyStart - 7101</td><td class="val">$3,014.21</td></tr>
+                    <tr><td>Spec 13 Mo - 7102</td><td class="val">$25,318.88</td></tr>
+                    <tr style="background:#eef"><td><b>Combined CD Principal</b></td><td class="val pos">$35,573.92</td></tr>
                 </table>
             </div>
         </div>
@@ -79,30 +70,24 @@
 
     <div class="col">
         <div class="gadget">
-            <div class="gadget-title">Google Finance: Schwab Portfolio View</div>
+            <div class="gadget-title">Schwab Portfolio (The Bits)</div>
             <div class="gadget-content">
                 <table class="fin-table">
-                    <tr><th>Investment</th><th>Ticker</th><th style="text-align:right">Market Value</th></tr>
-                    <tr class="acct-header"><td colspan="3">INDIVIDUAL ACCOUNT (...902)</td></tr>
-                    <tr><td>Micron Tech</td><td><span class="ticker">MU</span></td><td class="val pos">$5,489.84</td></tr>
-                    <tr><td>BlackRock Inc</td><td><span class="ticker">BLK</span></td><td class="val">$4,647.78</td></tr>
-                    <tr><td>NVIDIA Corp</td><td><span class="ticker">NVDA</span></td><td class="val">$2,717.25</td></tr>
-                    <tr><td>Apollo Global</td><td><span class="ticker">APO</span></td><td class="val pos">$2,862.86</td></tr>
-                    <tr><td>CrowdStrike</td><td><span class="ticker">CRWD</span></td><td class="val">$1,314.03</td></tr>
-                    
-                    <tr class="acct-header"><td colspan="3">IRA ACCOUNT (...IRA)</td></tr>
-                    <tr><td>Total IRA Equity</td><td><span class="ticker">CASH/ETF</span></td><td class="val pos">$12,450.00</td></tr>
-                    
-                    <tr style="background:#eef"><td colspan="2"><b>Total Bits (Equity)</b></td><td class="val pos">$58,634.71</td></tr>
+                    <tr><td>Micron Tech (MU)</td><td class="val pos">$5,489.84</td></tr>
+                    <tr><td>BlackRock (BLK)</td><td class="val">$4,647.78</td></tr>
+                    <tr><td>NVIDIA (NVDA)</td><td class="val">$2,717.25</td></tr>
+                    <tr><td>Apollo Global (APO)</td><td class="val pos">$2,862.86</td></tr>
+                    <tr><td>IRA Retirement Equity</td><td class="val pos">$12,450.00</td></tr>
+                    <tr style="background:#eef"><td><b>Total Bits Value</b></td><td class="val pos">$28,167.73</td></tr>
                 </table>
             </div>
         </div>
         <div class="gadget">
-            <div class="gadget-title">Sovereign Benchmark</div>
+            <div class="gadget-title">Prof G Intelligence</div>
             <div class="gadget-content">
-                <p>National Median (Age 48): <b>$247,200</b></p>
-                <p>Zahnle Command Total: <b class="pos">$587,182</b></p>
-                <p>Status: <b class="pos">Elite Tier (+237%)</b></p>
+                <p><i>"Sovereignty is the absence of economic anxiety."</i></p>
+                <p>• <b>2026 Strategy:</b> Your $35k CD ladder is the "bulletproof vest."</p>
+                <p>• <b>Focus:</b> Secure the 2458 Westwood Hill.</p>
             </div>
         </div>
     </div>
@@ -112,19 +97,20 @@
             <div class="gadget-title">The Hill (Atoms)</div>
             <div class="gadget-content">
                 <table class="fin-table">
-                    <tr><td>Westwood Property</td><td class="val">$425,000.00</td></tr>
-                    <tr><td>Equipment/Bobcat</td><td class="val pos">$15,000.00</td></tr>
+                    <tr><td>Property (Westwood)</td><td class="val">$425,000.00</td></tr>
+                    <tr><td>Bobcat/Equipment</td><td class="val pos">$15,000.00</td></tr>
                     <tr><td>Wall Project Debt</td><td class="val neg">-$37,000.00</td></tr>
                     <tr style="background:#eef"><td><b>Net Atoms</b></td><td class="val">$403,000.00</td></tr>
                 </table>
             </div>
         </div>
         <div class="gadget">
-            <div class="gadget-title">Active Alerts</div>
+            <div class="gadget-title">Sovereign Benchmark (Age 48)</div>
             <div class="gadget-content">
-                <p>• <b>Leak:</b> $316.66 Medicare Audit (Monday)</p>
-                <p>• <b>Nasdaq:</b> 22,211.91 (-0.45%)</p>
-                <p>• <b>Weather:</b> 41°F Light Rain (Clarkston)</p>
+                <p>US Median Net Worth: <b>$247,200</b></p>
+                <p>Zahnle Command Total: <b class="pos" id="grandTotal">$0</b></p>
+                <hr>
+                <p>Status: <b class="pos">Elite Alpha Tier</b></p>
             </div>
         </div>
     </div>
@@ -132,12 +118,13 @@
 
 <script>
     function runAudit() {
-        const cash = 125547.88;
-        const stocks = 58634.71; // Individual + IRA
-        const property = 403000.00;
-        const total = (cash + stocks + property);
-        
-        document.getElementById('execBrief').innerHTML = "<b>EXECUTIVE AUDIT:</b> Empire Net Worth is <b>$" + total.toLocaleString() + "</b>. Unified portfolio (Individual + IRA) stands at <b>$58,634</b>. You are holding a 2.3x advantage over the 48-year-old median.";
+        const cash = 47612.44;
+        const cds = 35573.92;
+        const bits = 28167.73;
+        const atoms = 403000.00;
+        const total = cash + cds + bits + atoms;
+        document.getElementById('grandTotal').innerText = '$' + total.toLocaleString();
+        document.getElementById('execBrief').innerHTML = "<b>EXECUTIVE AUDIT:</b> Empire Net Worth is <b>$" + total.toLocaleString() + "</b>. All 5 Navy Federal Certificates verified and locked.";
     }
 </script>
 </body>
