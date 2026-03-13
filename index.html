@@ -6,20 +6,20 @@
     <style>
         :root { --zen-green: #0a1f14; --leaf: #2d6a4f; --glow: #95d5b2; --text: #d8f3dc; --leak: #ff8a8a; --blue: #58a6ff; --gold: #f2e000; }
         body { background: linear-gradient(135deg, #040d08 0%, #0a1f14 100%); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; line-height: 1.6; }
-        .container { max-width: 1400px; margin: auto; }
-        .header { display: flex; justify-content: space-between; align-items: center; padding: 30px 0; border-bottom: 1px solid var(--leaf); }
-        .briefing-box { background: rgba(88, 166, 255, 0.05); border: 1px solid var(--blue); padding: 25px; border-radius: 12px; margin: 25px 0; border-left: 8px solid var(--blue); }
-        .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 25px; }
+        .container { max-width: 1600px; margin: auto; }
+        .header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; border-bottom: 1px solid var(--leaf); }
+        .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 25px 0; }
         .stat-box { background: rgba(45, 106, 79, 0.2); border: 1px solid var(--leaf); padding: 20px; border-radius: 12px; text-align: center; backdrop-filter: blur(5px); }
-        .stat-box div { font-size: 1.8rem; font-weight: bold; margin-top: 5px; }
-        .main-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 25px; }
-        .card { background: rgba(20, 40, 30, 0.7); border: 1px solid var(--leaf); border-radius: 12px; padding: 25px; margin-bottom: 25px; }
-        .card h2 { font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: var(--glow); border-bottom: 1px solid var(--leaf); padding-bottom: 10px; margin-top: 0; display: flex; justify-content: space-between; }
-        table { width: 100%; border-collapse: collapse; }
-        td { padding: 12px 5px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .stat-box div { font-size: 2rem; font-weight: bold; margin-top: 5px; }
+        .main-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 25px; }
+        .card { background: rgba(20, 40, 30, 0.7); border: 1px solid var(--leaf); border-radius: 12px; padding: 20px; height: fit-content; }
+        .card h2 { font-size: 0.9rem; letter-spacing: 2px; text-transform: uppercase; color: var(--glow); border-bottom: 1px solid var(--leaf); padding-bottom: 10px; margin-top: 0; display: flex; justify-content: space-between; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+        td { padding: 8px 5px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
         .val { text-align: right; font-weight: bold; font-family: 'Consolas', monospace; }
         .pos { color: var(--glow); } .neg { color: var(--leak); }
-        .update-btn { background: var(--blue); color: #040d08; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
+        .prof-g-box { border-left: 5px solid var(--gold); background: rgba(242, 224, 0, 0.05); padding: 20px; border-radius: 0 12px 12px 0; color: var(--gold); font-style: italic; margin-bottom: 25px; }
+        .update-btn { background: var(--blue); color: #040d08; border: none; padding: 10px 20px; border-radius: 5px; font-weight: bold; cursor: pointer; text-transform: uppercase; }
     </style>
 </head>
 <body>
@@ -29,62 +29,77 @@
         <button class="update-btn" onclick="location.reload()">🚀 Initiate Update</button>
     </div>
 
-    <div class="briefing-box">
-        <h3 style="margin-top: 0; color: var(--blue); letter-spacing: 2px;">📡 STRATEGIC INTELLIGENCE BRIEF</h3>
-        <p><strong>Market Alpha:</strong> While the [NASDAQ](https://client.schwab.com/app/accounts/positions/#/) is flat at -0.45%, your portfolio is climbing. Your 13 shares of <strong>MU</strong> are up <strong>+3.99% ($421.52)</strong>, driving a <strong>+$309.89</strong> day change.</p>
-        <p><strong>Liquidity Position:</strong> Unified cash is locked at <strong>$126,732</strong>. Your [Navy Federal Checking](https://digitalomni.navyfederal.org/nfcu-online-banking/accounts/list/summary) shows <strong>$2,126.52</strong> ready for tactical deployment.</p>
-        <p><strong>Primary Mission:</strong> Dispute the <strong>$316.66 Medicare leak</strong> on Monday. Do not let the Bits erode.</p>
+    <div class="prof-g-box">
+        <strong>PROF G DIRECTIVE:</strong> "The goal is not to be 'rich.' The goal is to be sovereign. Sovereignty is the ability to walk away from any situation that does not align with your values. Use your bits to buy back your time and secure the Hill."
     </div>
 
     <div class="stat-grid">
         <div class="stat-box"><small>TOTAL NET WORTH</small><div>$552,121</div></div>
-        <div class="stat-box"><small>HILL TARGET</small><div>$1,000,000</div></div>
-        <div class="stat-box"><small>UNIFIED LIQUIDITY</small><div class="pos">$126,732</div></div>
-        <div class="stat-box"><small>FICO STATUS</small><div>758</div></div>
+        <div class="stat-box"><small>LIQUIDITY (UNIFIED)</small><div class="pos">$126,732</div></div>
+        <div class="stat-box"><small>SCHWAB BITS</small><div>$46,184</div></div>
+        <div class="stat-box"><small>REPUTATION (FICO)</small><div>758</div></div>
     </div>
 
     <div class="main-grid">
-        <div class="left-col">
-            <div class="card">
-                <h2>🏦 NAVY FEDERAL UNIFIED <span>MINE & JUDY</span></h2>
-                <table>
-                    <tr><td>[NFCU Checking (...904)](https://digitalomni.navyfederal.org/nfcu-online-banking/accounts/list/summary)</td><td class="val">$2,126.52</td></tr>
-                    <tr><td>NFCU Savings (Combined)</td><td class="val">$1,820.38</td></tr>
-                    <tr><td>Judy's Strategic Capital</td><td class="val pos">+$76,600.98</td></tr>
-                    <tr style="background: rgba(149, 213, 178, 0.1);"><td><strong>Total Unified Base</strong></td><td class="val pos">$80,547.88</td></tr>
-                </table>
-            </div>
-
-            <div class="card">
-                <h2>📈 THE BITS (SCHWAB INDIVIDUAL) <span>+$309.89 Today</span></h2>
-                <table>
-                    <tr><td>[Total Account (...902)](https://client.schwab.com/app/accounts/positions/#/)</td><td class="val">$46,184.71</td></tr>
-                    <tr><td><strong>MU (Micron)</strong> - 13 Shares</td><td class="val pos">$5,479.83</td></tr>
-                    <tr><td><strong>NVDA (NVIDIA)</strong> - 15 Shares</td><td class="val">$2,718.23</td></tr>
-                    <tr><td><strong>TPG (TPG Inc)</strong> - 50 Shares</td><td class="val pos">$1,994.00</td></tr>
-                    <tr><td>Cash & Sweep</td><td class="val">$6.67</td></tr>
-                </table>
+        <div class="card" style="border-color: var(--blue);">
+            <h2 style="color: var(--blue);">🌍 GLOBAL NEWS & MACRO</h2>
+            <div style="font-size: 0.85rem;">
+                <strong>MARKET PULSE:</strong> NASDAQ is currently 22,211.91 (<strong>-0.45%</strong>). Tech is cooling, but the AI hardware cycle remains intact.
+                <br><br>
+                <strong>STRATEGIC WATCH:</strong> [Micron (MU)](https://client.schwab.com/app/accounts/positions/#/) is defying the market at **$421.81 (+4.06%)**. Your portfolio alpha is high today.
+                <br><br>
+                <strong>PRIMARY TARGET:</strong> Execute the **$316.66 Medicare leak** dispute on Monday.
             </div>
         </div>
 
-        <div class="right-col">
-            <div class="card">
-                <h2>📅 INCOME & DEPOSIT CALENDAR</h2>
-                <table>
-                    <tr><td>VA Fixed Deposit (1st)</td><td class="val pos">+$2,214.00</td></tr>
-                    <tr><td>Judy SS Deposit (3rd Wed)</td><td class="val pos">+$1,450.00</td></tr>
-                    <tr><td>NFCU CD Interest (1st)</td><td class="val pos">+$265.15</td></tr>
-                    <tr style="border-top: 1px solid var(--leaf);"><td><strong>Total Monthly Flow</strong></td><td class="val">$3,929.15</td></tr>
-                </table>
-            </div>
+        <div class="card">
+            <h2>📈 THE BITS: SCHWAB (...902) <span>+$309.89 TODAY</span></h2>
+            <table>
+                <tr><td>[Micron (MU)](https://client.schwab.com/app/accounts/positions/#/)</td><td class="val pos">$5,483.60</td></tr>
+                <tr><td>[BlackRock (BLK)](https://client.schwab.com/app/accounts/positions/#/)</td><td class="val">$4,640.80</td></tr>
+                <tr><td>[NVIDIA (NVDA)](https://client.schwab.com/app/accounts/positions/#/)</td><td class="val">$2,711.19</td></tr>
+                <tr><td>[TPG Inc (TPG)](https://client.schwab.com/app/accounts/positions/#/)</td><td class="val pos">$1,990.50</td></tr>
+                <tr><td>[Apollo (APO)](https://client.schwab.com/app/accounts/positions/#/)</td><td class="val pos">$2,854.04</td></tr>
+                <tr><td>Cash Sweep</td><td class="val">$6.67</td></tr>
+            </table>
+        </div>
 
-            <div class="card">
-                <h2>🏗️ THE HILL (ATOMS)</h2>
-                <table>
-                    <tr><td>Baseline Value</td><td class="val">$425,000.00</td></tr>
-                    <tr><td>Wall Project Debt</td><td class="val neg">-$37,000.00</td></tr>
-                </table>
-            </div>
+        <div class="card">
+            <h2>🏦 NFCU UNIFIED <span>MINE & JUDY</span></h2>
+            <table>
+                <tr><td>[NFCU Checking (...904)](https://digitalomni.navyfederal.org/nfcu-online-banking/accounts/list/summary)</td><td class="val">$2,126.52</td></tr>
+                <tr><td>NFCU Savings (Combined)</td><td class="val">$1,820.38</td></tr>
+                <tr><td>Judy's Strategic Capital</td><td class="val pos">+$76,600.98</td></tr>
+                <tr style="background: rgba(149, 213, 178, 0.1);"><td><strong>Total Unified Base</strong></td><td class="val pos">$80,547.88</td></tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>💰 INCOME VELOCITY <span>PER MONTH</span></h2>
+            <table>
+                <tr><td>VA Fixed Deposit (1st)</td><td class="val pos">+$2,214.00</td></tr>
+                <tr><td>Judy SS Deposit (3rd Wed)</td><td class="val pos">+$1,450.00</td></tr>
+                <tr><td>NFCU CD Interest (1st)</td><td class="val pos">+$265.15</td></tr>
+                <tr style="border-top: 1px solid var(--leaf);"><td><strong>Total Monthly Flow</strong></td><td class="val pos">$3,929.15</td></tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>🏗️ THE HILL (ATOMS) <span>TARGET: $1M</span></h2>
+            <table>
+                <tr><td>Current Ground Truth</td><td class="val">$425,000.00</td></tr>
+                <tr><td>Wall Project Debt</td><td class="val neg">-$37,000.00</td></tr>
+                <tr><td>Equity Delta to Target</td><td class="val neg">-$575,000.00</td></tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>🛡️ LIABILITIES & REPUTATION</h2>
+            <table>
+                <tr><td>Amex Gold (Mar 27)</td><td class="val neg">-$134.87</td></tr>
+                <tr><td>Navy Fed Power Card Limit</td><td class="val pos">$18,000.00</td></tr>
+                <tr><td>FICO Health Score</td><td class="val pos">758</td></tr>
+            </table>
         </div>
     </div>
 </div>
