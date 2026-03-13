@@ -2,105 +2,100 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zahnle Sovereign Command</title>
     <style>
-        :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #c9d1d9; --blue: #58a6ff; --green: #238636; --red: #da3633; }
-        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: linear-gradient(rgba(13,17,23,0.9), rgba(13,17,23,0.9)), url('https://photos.google.com/photo/AF1QipORKencK3smgzSnUUsf5_oumtwU69vPgJO9ioz3'); background-size: cover; background-attachment: fixed; color: var(--text); margin: 0; padding: 20px; }
-        .container { max-width: 1200px; margin: auto; }
-        .header { text-align: center; padding: 20px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 20px; }
-        .stats-strip { display: flex; justify-content: space-around; background: var(--card); padding: 15px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 20px; text-align: center; }
-        .stat-val { display: block; font-size: 1.5rem; font-weight: bold; color: white; }
-        .stat-label { font-size: 0.75rem; text-transform: uppercase; color: var(--blue); }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
-        .card h2 { font-size: 0.9rem; margin-top: 0; border-bottom: 1px solid var(--border); padding-bottom: 10px; text-transform: uppercase; color: var(--blue); }
+        :root { --zen-green: #11261a; --leaf: #2d6a4f; --glow: #95d5b2; --text: #d8f3dc; --leak: #ff8a8a; --blue: #58a6ff; }
+        body { background: linear-gradient(135deg, #040d08 0%, #11261a 100%); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; }
+        .container { max-width: 1400px; margin: auto; }
+        .header { text-align: center; padding: 30px 0; border-bottom: 1px solid var(--leaf); }
+        .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 25px 0; }
+        .stat-box { background: rgba(45, 106, 79, 0.2); border: 1px solid var(--leaf); padding: 20px; border-radius: 12px; text-align: center; }
+        .main-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 25px; }
+        .card { background: rgba(20, 40, 30, 0.7); border: 1px solid var(--leaf); border-radius: 12px; padding: 20px; margin-bottom: 25px; }
+        .card h2 { font-size: 0.85rem; letter-spacing: 2px; text-transform: uppercase; color: var(--glow); border-bottom: 1px solid var(--leaf); padding-bottom: 10px; margin-top: 0; }
         table { width: 100%; border-collapse: collapse; }
-        td { padding: 10px 5px; border-bottom: 1px solid #21262d; font-size: 0.9rem; }
-        .val { text-align: right; font-weight: bold; }
-        .pos { color: var(--green); } .neg { color: var(--red); }
-        .prof-g { border-left: 4px solid #f2e000; padding: 10px; background: rgba(242, 224, 0, 0.05); margin-bottom: 20px; font-style: italic; }
+        td { padding: 10px 5px; border-bottom: 1px solid rgba(255,255,255,0.05); }
+        .val { text-align: right; font-weight: bold; font-family: 'Consolas', monospace; }
+        .prof-g-box { border: 2px solid #f2e000; background: rgba(242, 224, 0, 0.05); padding: 15px; border-radius: 8px; color: #f2e000; font-style: italic; margin-bottom: 20px; }
+        .audit-btn { background: var(--blue); color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-weight: bold; margin-bottom: 20px; }
     </style>
 </head>
 <body>
-
 <div class="container">
     <div class="header">
-        <h1>🏛️ ZAHNLE SOVEREIGN COMMAND</h1>
-        <p>Stoicism is the Bridge to Wealth</p>
+        <h1>🏛️ ZAHNLE SOVEREIGN</h1>
+        <button class="audit-btn" onclick="alert('Audit Mode: Copy your Schwab and Navy Fed balances into the code editor to push live.')">🚀 START DAILY AUDIT</button>
     </div>
 
-    <div class="stats-strip">
-        <div><span class="stat-label">Net Worth Est.</span><span class="stat-val">$881,121</span></div>
-        <div><span class="stat-label">Total Liquidity</span><span class="stat-val">$126,732</span></div>
-        <div><span class="stat-label">FICO Reputation</span><span class="stat-val">758</span></div>
-        <div><span class="stat-label">Monthly Burn</span><span class="stat-val neg">$2,100</span></div>
+    <div class="prof-g-box">
+        <strong>PROF G DIRECTIVE:</strong> "The man who audits his own accounts daily is the only one who truly owns them. Don't let automation make you blind."
     </div>
 
-    <div class="prof-g">
-        <strong>PROF G ALGEBRA:</strong> (Focus + Stoicism) x Time = Wealth. "The most powerful force in the universe is not compound interest, it's a high savings rate."
+    <div class="stat-grid">
+        <div class="stat-box"><small>NET WORTH</small><div style="font-size:1.5rem;">$521,121</div></div>
+        <div class="stat-box"><small>HILL TARGET</small><div style="font-size:1.5rem;">$1,000,000</div></div>
+        <div class="stat-box"><small>LIQUIDITY</small><div style="font-size:1.5rem; color:var(--glow);">$126,732</div></div>
+        <div class="stat-box"><small>REPUTATION</small><div style="font-size:1.5rem;">758</div></div>
     </div>
 
-    <div class="grid">
-        <div class="card">
-            <h2>📈 THE BITS (ASSETS)</h2>
-            <table>
-                <tr><td><a href="https://client.schwab.com/app/accounts/positions/#/" style="color:inherit;text-decoration:none;">Schwab Individual (...902)</a></td><td class="val">$46,184.71</td></tr>
-                <tr><td>Navy Federal Savings</td><td class="val">$79,547.88</td></tr>
-                <tr><td>Wafd Reserve</td><td class="val">$1,000.00</td></tr>
-                <tr style="border-top: 2px solid var(--border);"><td><strong>Total Bits</strong></td><td class="val pos">$126,732.59</td></tr>
-            </table>
+    <div class="main-grid">
+        <div class="left-col">
+            <div class="card">
+                <h2>📈 THE BITS (INVESTMENTS)</h2>
+                <table>
+                    <tr><td><a href="https://client.schwab.com/app/accounts/positions/#/" style="color:inherit;">Schwab Account (...902)</a></td><td class="val">$46,184.71</td></tr>
+                    <tr><td>Total Day Change</td><td class="val pos" style="color:var(--glow);">+$309.89</td></tr>
+                    <tr><td>Micron (MU) Status</td><td class="val">$5,455.91</td></tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2>🏗️ THE ATOMS (REALTY)</h2>
+                <table>
+                    <tr><td>2458 Westwood Ct</td><td class="val">$425,000.00</td></tr>
+                    <tr><td>Retaining Wall Project</td><td class="val neg" style="color:var(--leak);">-$37,000.00</td></tr>
+                    <tr><td>Bobcat Equity</td><td class="val pos" style="color:var(--glow);">+$15,000.00</td></tr>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2>📅 INCOME & DEPOSIT CALENDAR</h2>
+                <table>
+                    <tr><td>VA Fixed Deposit (April 1)</td><td class="val pos">+$3,528.14</td></tr>
+                    <tr><td>Navy Fed Interest (April 1)</td><td class="val pos">+$265.15</td></tr>
+                    <tr style="background: rgba(149, 213, 178, 0.1);"><td><strong>Projected Inflow</strong></td><td class="val pos">$3,835.59</td></tr>
+                </table>
+            </div>
         </div>
 
-        <div class="card">
-            <h2>🏗️ THE ATOMS (REALTY)</h2>
-            <table>
-                <tr><td>2458 Westwood Ct (Market)</td><td class="val">$785,000.00</td></tr>
-                <tr><td>Retaining Wall Project</td><td class="val neg">-$37,000.00</td></tr>
-                <tr><td>Bobcat Trade-In Credit</td><td class="val pos">+$15,000.00</td></tr>
-                <tr style="border-top: 2px solid var(--border);"><td><strong>Total Atoms</strong></td><td class="val">$763,000.00</td></tr>
-            </table>
-        </div>
+        <div class="right-col">
+            <div class="card" style="border-color: var(--blue);">
+                <h2>🌍 GLOBAL MACRO WATCH</h2>
+                <p style="font-size: 0.85rem;">NASDAQ is currently at 22,211.91 (-0.45%). Tech is cooling, but your concentration in [MU](https://client.schwab.com/app/accounts/positions/#/) (+3.54%) is shielding the portfolio.</p>
+            </div>
 
-        <div class="card">
-            <h2>💎 REPUTATION & LEVERAGE</h2>
-            <table>
-                <tr><td>TransUnion (Credit Karma)</td><td class="val">758</td></tr>
-                <tr><td>New NFCU Power Line</td><td class="val">$18,000.00</td></tr>
-                <tr><td>Apple Card Limit</td><td class="val">$1,500.00</td></tr>
-                <tr><td><strong>Available Leverage</strong></td><td class="val pos">$30,485.00</td></tr>
-            </table>
-        </div>
-
-        <div class="card">
-            <h2>💰 INCOME VELOCITY</h2>
-            <table>
-                <tr><td>Fixed Monthly (VA/Fixed)</td><td class="val">$3,528.14</td></tr>
-                <tr><td>Empty Space Meditation</td><td class="val pos">Target $140k/yr</td></tr>
-                <tr><td>Schwab Day Change</td><td class="val pos">+$309.89</td></tr>
-            </table>
-        </div>
-
-        <div class="card">
-            <h2>🛡️ THE SHIELD (LIABILITIES)</h2>
-            <table>
-                <tr><td>Nelnet Student Loan</td><td class="val neg">-$18,448.00</td></tr>
-                <tr><td><a href="https://global.americanexpress.com/dashboard" style="color:inherit;text-decoration:none;">Amex Total Balance</a></td><td class="val neg">-$322.08</td></tr>
-                <tr><td>Amex Statement (Mar 27)</td><td class="val">-$134.87</td></tr>
-            </table>
-        </div>
-
-        <div class="card">
-            <h2>⚠️ STOICISM INDEX (LEAKS)</h2>
-            <table>
-                <tr><td>Medicare Overcharge</td><td class="val neg">$316.66/mo</td></tr>
-                <tr><td>UltraVPN (Auto-Pay)</td><td class="val neg">$149.99</td></tr>
-                <tr><td>McDonald's (Leak)</td><td class="val neg">$14.92</td></tr>
-                <tr style="border-top: 2px solid var(--border);"><td><strong>Potential Recovery</strong></td><td class="val pos">+$481.57</td></tr>
-            </table>
+            <div class="card">
+                <h2>🗓️ THE WEEK FORWARD</h2>
+                <p style="font-size: 0.85rem;">
+                    • Monday: Doctor Appointment<br>
+                    • Monday: Dispute Medicare Leak<br>
+                    • Mar 27: Amex Payment Due
+                </p>
+            </div>
+            
+            <div class="card">
+                <h2>🏦 BANKING BALANCES</h2>
+                <table>
+                    <tr><td>[Navy Fed Checking](https://digitalomni.navyfederal.org/nfcu-online-banking/accounts/list/summary)</td><td class="val">$2,126.52</td></tr>
+                    <tr><td>Navy Fed Savings</td><td class="val">$1,820.38</td></tr>
+                    <tr><td>Schwab Cash</td><td class="val">$6.67</td></tr>
+                </table>
+            </div>
         </div>
     </div>
 </div>
+</body>
+</html>
 
 </body>
 </html>
