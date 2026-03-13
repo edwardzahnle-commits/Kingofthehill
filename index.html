@@ -3,80 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zahnle Empire Command</title>
+    <title>Zahnle Sovereign Command</title>
     <style>
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            background: linear-gradient(rgba(10, 14, 20, 0.9), rgba(10, 14, 20, 0.9)), 
-                        url('https://photos.google.com/photo/AF1QipORKencK3smgzSnUUsf5_oumtwU69vPgJO9ioz3'); 
-            background-size: cover; background-attachment: fixed; color: #e0e0e0; margin: 0; padding: 20px; 
-        }
-        .container { max-width: 1100px; margin: auto; }
-        .header { text-align: center; background: rgba(22, 27, 34, 0.85); border: 1px solid #30363d; border-radius: 8px; padding: 20px; margin-bottom: 25px; }
-        h1 { color: #ffffff; letter-spacing: 2px; text-transform: uppercase; margin: 0; }
-        .progress-container { background-color: #1f2937; border-radius: 10px; height: 25px; width: 100%; margin: 15px 0; border: 1px solid #30363d; overflow: hidden; }
-        .progress-bar { background: linear-gradient(90deg, #238636, #2ea043); width: 52%; height: 100%; text-align: center; line-height: 25px; font-size: 12px; color: white; font-weight: bold; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .card { background-color: rgba(22, 27, 34, 0.95); border: 1px solid #30363d; border-radius: 8px; padding: 20px; backdrop-filter: blur(4px); }
-        .card h2 { margin-top: 0; font-size: 1.1rem; color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; display: flex; justify-content: space-between; }
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid #21262d; font-size: 0.9rem; }
-        .status-prime { color: #3fb950; font-weight: bold; }
-        .status-leak { color: #f85149; font-weight: bold; }
-        .action-link { color: #58a6ff; text-decoration: none; }
-        .tag { font-size: 0.7rem; padding: 2px 6px; border-radius: 4px; background: #30363d; color: #c9d1d9; }
+        :root { --bg: #0d1117; --card: #161b22; --border: #30363d; --text: #c9d1d9; --blue: #58a6ff; --green: #238636; --red: #da3633; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: linear-gradient(rgba(13,17,23,0.9), rgba(13,17,23,0.9)), url('https://photos.google.com/photo/AF1QipORKencK3smgzSnUUsf5_oumtwU69vPgJO9ioz3'); background-size: cover; background-attachment: fixed; color: var(--text); margin: 0; padding: 20px; }
+        .container { max-width: 1200px; margin: auto; }
+        .header { text-align: center; padding: 20px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; margin-bottom: 20px; }
+        .stats-strip { display: flex; justify-content: space-around; background: var(--card); padding: 15px; border-radius: 12px; border: 1px solid var(--border); margin-bottom: 20px; text-align: center; }
+        .stat-val { display: block; font-size: 1.5rem; font-weight: bold; color: white; }
+        .stat-label { font-size: 0.75rem; text-transform: uppercase; color: var(--blue); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+        .card h2 { font-size: 0.9rem; margin-top: 0; border-bottom: 1px solid var(--border); padding-bottom: 10px; text-transform: uppercase; color: var(--blue); }
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 10px 5px; border-bottom: 1px solid #21262d; font-size: 0.9rem; }
+        .val { text-align: right; font-weight: bold; }
+        .pos { color: var(--green); } .neg { color: var(--red); }
+        .prof-g { border-left: 4px solid #f2e000; padding: 10px; background: rgba(242, 224, 0, 0.05); margin-bottom: 20px; font-style: italic; }
     </style>
 </head>
 <body>
+
 <div class="container">
     <div class="header">
-        <h1>🏛️ ZAHNLE EMPIRE COMMAND</h1>
-        <p><em>"The View from the Deck: Precision in the Bits, Authority in the Atoms."</em></p>
-        <div class="progress-container"><div class="progress-bar">52% TO $1.0M TARGET</div></div>
+        <h1>🏛️ ZAHNLE SOVEREIGN COMMAND</h1>
+        <p>Stoicism is the Bridge to Wealth</p>
+    </div>
+
+    <div class="stats-strip">
+        <div><span class="stat-label">Net Worth Est.</span><span class="stat-val">$881,121</span></div>
+        <div><span class="stat-label">Total Liquidity</span><span class="stat-val">$126,732</span></div>
+        <div><span class="stat-label">FICO Reputation</span><span class="stat-val">758</span></div>
+        <div><span class="stat-label">Monthly Burn</span><span class="stat-val neg">$2,100</span></div>
+    </div>
+
+    <div class="prof-g">
+        <strong>PROF G ALGEBRA:</strong> (Focus + Stoicism) x Time = Wealth. "The most powerful force in the universe is not compound interest, it's a high savings rate."
     </div>
 
     <div class="grid">
         <div class="card">
-            <h2>💎 REPUTATION <span class="tag">758 TU / 767 EX</span></h2>
+            <h2>📈 THE BITS (ASSETS)</h2>
             <table>
-                <tr><th>Platform</th><th>Detail</th><th>Status</th></tr>
-                <tr><td><a href="https://www.creditkarma.com/credit-health/transunion/credit-report" class="action-link">Credit Karma</a></td><td>758 Score</td><td class="status-prime">EXCELLENT</td></tr>
-                <tr><td>NFCU Inquiry</td><td>$18k Power Card</td><td class="status-prime">APPROVED</td></tr>
-                <tr><td>Employment</td><td>EmptySpaceMeditation</td><td>VERIFIED</td></tr>
+                <tr><td><a href="https://client.schwab.com/app/accounts/positions/#/" style="color:inherit;text-decoration:none;">Schwab Individual (...902)</a></td><td class="val">$46,184.71</td></tr>
+                <tr><td>Navy Federal Savings</td><td class="val">$79,547.88</td></tr>
+                <tr><td>Wafd Reserve</td><td class="val">$1,000.00</td></tr>
+                <tr style="border-top: 2px solid var(--border);"><td><strong>Total Bits</strong></td><td class="val pos">$126,732.59</td></tr>
             </table>
         </div>
 
         <div class="card">
-            <h2>📈 WEALTH ENGINE <span class="tag">+$839 TODAY</span></h2>
+            <h2>🏗️ THE ATOMS (REALTY)</h2>
             <table>
-                <tr><th>Institution</th><th>Asset</th><th>Value</th></tr>
-                <tr><td>[Schwab](https://client.schwab.com/app/accounts/summary/)</td><td>Portfolio</td><td>$61,486.25</td></tr>
-                <tr><td>[Amex](https://global.americanexpress.com/dashboard)</td><td>Total Bal</td><td>$322.08</td></tr>
-                <tr><td>[Apple Card](https://www.creditkarma.com/credit-health/transunion/credit-report)</td><td>Available</td><td>$1,500.00</td></tr>
-                <tr><td>Wafd</td><td>Reserve</td><td>$1,000.00</td></tr>
+                <tr><td>2458 Westwood Ct (Market)</td><td class="val">$785,000.00</td></tr>
+                <tr><td>Retaining Wall Project</td><td class="val neg">-$37,000.00</td></tr>
+                <tr><td>Bobcat Trade-In Credit</td><td class="val pos">+$15,000.00</td></tr>
+                <tr style="border-top: 2px solid var(--border);"><td><strong>Total Atoms</strong></td><td class="val">$763,000.00</td></tr>
             </table>
         </div>
 
         <div class="card">
-            <h2>🏗️ PROJECT: THE HILL</h2>
+            <h2>💎 REPUTATION & LEVERAGE</h2>
             <table>
-                <tr><td>Total Wall Contract</td><td>$37,000</td></tr>
-                <tr><td>Bobcat Trade-In</td><td>$15,000</td></tr>
-                <tr><td>NFCU Cash Deposit</td><td>$10,000</td></tr>
-                <tr><td class="status-prime">Net 60-Day Bal</td><td>$12,000</td></tr>
+                <tr><td>TransUnion (Credit Karma)</td><td class="val">758</td></tr>
+                <tr><td>New NFCU Power Line</td><td class="val">$18,000.00</td></tr>
+                <tr><td>Apple Card Limit</td><td class="val">$1,500.00</td></tr>
+                <tr><td><strong>Available Leverage</strong></td><td class="val pos">$30,485.00</td></tr>
             </table>
         </div>
 
         <div class="card">
-            <h2>🛡️ SHIELD (CASH FLOW)</h2>
+            <h2>💰 INCOME VELOCITY</h2>
             <table>
-                <tr><th>Liability</th><th>Due Date</th><th>Amount</th></tr>
-                <tr><td class="status-leak">Medicare Leak</td><td>Monday</td><td>$316.66</td></tr>
-                <tr><td><a href="https://global.americanexpress.com/dashboard" class="action-link">Amex Pmt</a></td><td>March 27</td><td>$134.87</td></tr>
-                <tr><td>[AAA Visa Pmt](https://d.comenity.net/ac/advantage/public/home)</td><td>March 17</td><td>$1,394.05</td></tr>
+                <tr><td>Fixed Monthly (VA/Fixed)</td><td class="val">$3,528.14</td></tr>
+                <tr><td>Empty Space Meditation</td><td class="val pos">Target $140k/yr</td></tr>
+                <tr><td>Schwab Day Change</td><td class="val pos">+$309.89</td></tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>🛡️ THE SHIELD (LIABILITIES)</h2>
+            <table>
+                <tr><td>Nelnet Student Loan</td><td class="val neg">-$18,448.00</td></tr>
+                <tr><td><a href="https://global.americanexpress.com/dashboard" style="color:inherit;text-decoration:none;">Amex Total Balance</a></td><td class="val neg">-$322.08</td></tr>
+                <tr><td>Amex Statement (Mar 27)</td><td class="val">-$134.87</td></tr>
+            </table>
+        </div>
+
+        <div class="card">
+            <h2>⚠️ STOICISM INDEX (LEAKS)</h2>
+            <table>
+                <tr><td>Medicare Overcharge</td><td class="val neg">$316.66/mo</td></tr>
+                <tr><td>UltraVPN (Auto-Pay)</td><td class="val neg">$149.99</td></tr>
+                <tr><td>McDonald's (Leak)</td><td class="val neg">$14.92</td></tr>
+                <tr style="border-top: 2px solid var(--border);"><td><strong>Potential Recovery</strong></td><td class="val pos">+$481.57</td></tr>
             </table>
         </div>
     </div>
 </div>
+
 </body>
 </html>
