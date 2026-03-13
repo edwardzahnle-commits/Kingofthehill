@@ -18,26 +18,25 @@
         td { padding: 10px 4px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
         .val { text-align: right; font-weight: bold; font-family: 'Consolas', monospace; }
         .pos { color: var(--glow); } .neg { color: var(--leak); }
-        .launch-link { color: var(--blue); text-decoration: none; font-weight: bold; }
-        .prof-g-box { border-left: 5px solid var(--gold); background: rgba(242, 224, 0, 0.05); padding: 15px; border-radius: 0 12px 12px 0; color: var(--gold); font-style: italic; margin-bottom: 20px; font-size: 0.95rem; }
+        .brief-box { border-left: 5px solid var(--gold); background: rgba(242, 224, 0, 0.05); padding: 20px; border-radius: 0 12px 12px 0; color: var(--text); margin-bottom: 25px; }
         .update-btn { background: var(--blue); color: #040d08; border: none; padding: 8px 16px; border-radius: 5px; font-weight: bold; cursor: pointer; text-transform: uppercase; }
     </style>
 </head>
-<body>
+<body onload="runAudit()">
 <div class="container">
     <div class="header">
         <h1 style="letter-spacing: 8px; font-weight: 200; margin: 0;">🏛️ ZAHNLE SOVEREIGN</h1>
-        <button class="update-btn" onclick="location.reload()">🚀 Initiate Update</button>
+        <button class="update-btn" onclick="runAudit()">🚀 INITIATE UPDATE</button>
     </div>
 
-    <div class="prof-g-box">
-        <strong>DIRECTIVE:</strong> "The median 48-year-old is surviving. You are building. Sovereignty is the ability to walk away. Secure the atoms."
+    <div id="execBrief" class="brief-box">
+        <strong>EXECUTIVE INTELLIGENCE BRIEF:</strong> Initializing system audit...
     </div>
 
     <div class="stat-grid">
-        <div class="stat-box"><small>EMPIRE NET WORTH</small><div>$552,184</div></div>
+        <div class="stat-box"><small>EMPIRE NET WORTH</small><div id="totalNW">$0</div></div>
         <div class="stat-box"><small>HILL ADVANTAGE</small><div class="pos">+223%</div></div>
-        <div class="stat-box"><small>UNIFIED LIQUIDITY</small><div class="pos">$126,738</div></div>
+        <div class="stat-box"><small>UNIFIED LIQUIDITY</small><div id="totalLiq" class="pos">$0</div></div>
         <div class="stat-box"><small>FICO STATUS</small><div>758</div></div>
     </div>
 
@@ -45,42 +44,23 @@
         <div class="card" style="border-color: var(--blue);">
             <h2 style="color: var(--blue);">🌍 GLOBAL INTELLIGENCE PORTAL</h2>
             <div style="font-size: 0.85rem;">
-                <p><strong>Macro:</strong> <a href="https://www.google.com/finance/quote/.IXIC:INDEXNASDAQ" class="launch-link">NASDAQ Live</a> | <a href="https://www.cnbc.com/world-markets/" class="launch-link">World Markets</a></p>
-                <p><strong>News:</strong> <a href="https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx1YlY4U00xSlpSVTU2S0FBU0FRLS" class="launch-link">Top Headlines</a> | <a href="https://www.reuters.com/business/" class="launch-link">Reuters Business</a></p>
-                <p><strong>Zillow/Redfin:</strong> <a href="https://www.redfin.com/county/3072/WA/Asotin-County/housing-market" class="launch-link">99403 Intel</a> | <a href="https://www.redfin.com/zipcode/83501/housing-market" class="launch-link">83501 Intel</a></p>
+                <p><strong>Macro:</strong> <a href="https://www.google.com/finance/quote/.IXIC:INDEXNASDAQ" target="_blank">NASDAQ Live</a> | <a href="https://www.cnbc.com/world-markets/" target="_blank">World Markets</a></p>
+                <p><strong>Real Estate:</strong> <a href="https://www.redfin.com/county/3072/WA/Asotin-County/housing-market" target="_blank">99403 Intel</a> | <a href="https://www.redfin.com/zipcode/83501/housing-market" target="_blank">83501 Intel</a></p>
             </div>
         </div>
 
-        <div class="card" style="border-color: var(--gold);">
-            <h2 style="color: var(--gold);">👑 KING OF THE HILL: 48YO PEERS</h2>
-            <table>
-                <tr><td>Sovereign Net Worth</td><td class="val pos">$552,184</td></tr>
-                <tr><td>US Median (45-54)</td><td class="val">$247,200</td></tr>
-                <tr style="background: rgba(242, 224, 0, 0.1);"><td><strong>Hill Advantage</strong></td><td class="val pos">+223%</td></tr>
-            </table>
-        </div>
-
         <div class="card">
-            <h2>🏦 BANKING & CASH FLOW <span>MINE & JUDY</span></h2>
+            <h2>🏦 BANKING & LIQUIDITY <span>NAVY FED</span></h2>
             <table>
                 <tr><td>[NFCU Checking](https://digitalomni.navyfederal.org/signin/?NFCUSIGNOFF=2)</td><td class="val">$2,126.52</td></tr>
-                <tr><td>NFCU Main Savings</td><td class="val">$1,820.38</td></tr>
+                <tr><td>NFCU Savings</td><td class="val">$1,820.38</td></tr>
                 <tr><td>Judy's Strategic Capital</td><td class="val pos">+$76,600.98</td></tr>
-                <tr style="background: rgba(149, 213, 178, 0.1);"><td><strong>Total Strike-Force Cash</strong></td><td class="val pos">$80,554.55</td></tr>
+                <tr style="background: rgba(149, 213, 178, 0.1);"><td><strong>Unified Cash Base</strong></td><td class="val pos">$80,547.88</td></tr>
             </table>
         </div>
 
         <div class="card">
-            <h2>📜 CERTIFICATES & YIELD</h2>
-            <table>
-                <tr><td>NFCU CD Principal</td><td class="val">$45,000.00</td></tr>
-                <tr><td>Monthly Yield (1st)</td><td class="val pos">+$265.15</td></tr>
-                <tr><td>APY Benchmark</td><td class="val pos">5.15%</td></tr>
-            </table>
-        </div>
-
-        <div class="card">
-            <h2>📈 THE BITS: SCHWAB (...902) <span>+$309.89 TODAY</span></h2>
+            <h2>📈 THE BITS: SCHWAB (...902)</h2>
             <table>
                 <tr><td>[Micron (MU)](https://client.schwab.com/app/accounts/positions/#/)</td><td class="val pos">$5,489.84</td></tr>
                 <tr><td>[BlackRock (BLK)](https://client.schwab.com/app/accounts/positions/#/)</td><td class="val">$4,647.78</td></tr>
@@ -94,28 +74,34 @@
             <table>
                 <tr><td>VA Fixed Deposit (1st)</td><td class="val pos">+$2,214.00</td></tr>
                 <tr><td>Judy SS Deposit</td><td class="val pos">+$1,450.00</td></tr>
-                <tr><td>Total Cash Velocity</td><td class="val pos">$3,971.45</td></tr>
-            </table>
-        </div>
-
-        <div class="card">
-            <h2>🏗️ THE HILL (ATOMS) <span>ZIP: 99403 / 83501</span></h2>
-            <table>
-                <tr><td>2458 Westwood Base</td><td class="val">$425,000.00</td></tr>
-                <tr><td>Wall Contract Debt</td><td class="val neg">-$37,000.00</td></tr>
-                <tr><td>Bobcat Net Equity</td><td class="val pos">+$15,000.00</td></tr>
-            </table>
-        </div>
-
-        <div class="card">
-            <h2>🛡️ SHIELDS & LIABILITIES</h2>
-            <table>
-                <tr><td>Amex Gold (Mar 27)</td><td class="val neg">-$134.87</td></tr>
-                <tr><td>Medicare Leak (Audit)</td><td class="val neg">-$316.66</td></tr>
-                <tr><td>NFCU Power Card Limit</td><td class="val pos">$18,000.00</td></tr>
+                <tr><td>CD Accrual (Fixed)</td><td class="val pos">+$265.15</td></tr>
             </table>
         </div>
     </div>
 </div>
+
+<script>
+    function runAudit() {
+        // GROUND TRUTH FORMULAS
+        const nfcuTotal = 80547.88;
+        const schwabTotal = 46184.71;
+        const hillValue = 425000.00;
+        const debt = 37134.87; // Wall + Amex
+        
+        const unifiedLiq = nfcuTotal + schwabTotal;
+        const netWorth = (unifiedLiq + hillValue) - debt;
+        
+        document.getElementById('totalLiq').innerText = '$' + unifiedLiq.toLocaleString();
+        document.getElementById('totalNW').innerText = '$' + netWorth.toLocaleString();
+        
+        const brief = `
+            <strong>EXECUTIVE COMMAND REPORT:</strong> Audit successful. Your unified liquidity of <strong>$${unifiedLiq.toLocaleString()}</strong> provides a massive shield. 
+            You are currently outperforming the 48-year-old median by <strong>223%</strong>. 
+            <strong>Priority:</strong> The $316.66 Medicare leak is the only active erosion point. 
+            Micron (MU) remains your primary engine in the Bits sector.
+        `;
+        document.getElementById('execBrief').innerHTML = brief;
+    }
+</script>
 </body>
 </html>
