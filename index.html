@@ -2,79 +2,111 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Zahnle Sovereign Command</title>
+    <title>Zahnle Sovereign Command - Classic View</title>
     <style>
-        :root { --zen-green: #0a1f14; --leaf: #2d6a4f; --glow: #95d5b2; --text: #d8f3dc; --leak: #ff8a8a; --blue: #58a6ff; --gold: #f2e000; }
-        body { background: linear-gradient(135deg, #040d08 0%, #0a1f14 100%); color: var(--text); font-family: 'Segoe UI', sans-serif; margin: 0; padding: 20px; line-height: 1.4; }
-        .container { max-width: 1800px; margin: auto; }
-        .header { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--leaf); }
-        .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 20px 0; }
-        .stat-box { background: rgba(45, 106, 79, 0.2); border: 1px solid var(--leaf); padding: 20px; border-radius: 12px; text-align: center; backdrop-filter: blur(5px); }
-        .stat-box div { font-size: 2rem; font-weight: bold; margin-top: 5px; }
-        .main-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; }
-        .card { background: rgba(20, 40, 30, 0.7); border: 1px solid var(--leaf); border-radius: 12px; padding: 20px; height: fit-content; }
-        .card h2 { font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--glow); border-bottom: 1px solid var(--leaf); padding-bottom: 10px; margin-top: 0; display: flex; justify-content: space-between; }
-        table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-        td { padding: 10px 4px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
-        .val { text-align: right; font-weight: bold; font-family: 'Consolas', monospace; }
-        .pos { color: var(--glow); } .neg { color: var(--leak); }
-        .brief-box { border-left: 5px solid var(--gold); background: rgba(242, 224, 0, 0.05); padding: 20px; border-radius: 0 12px 12px 0; color: var(--text); margin-bottom: 25px; }
-        .update-btn { background: var(--blue); color: #040d08; border: none; padding: 8px 16px; border-radius: 5px; font-weight: bold; cursor: pointer; text-transform: uppercase; }
+        /* The 2006 Palette: White backgrounds, Blue links, Gray accents */
+        body { background-color: #ffffff; color: #000000; font-family: arial, sans-serif; margin: 0; padding: 0; }
+        a { color: #0000cc; text-decoration: underline; cursor: pointer; }
+        a:visited { color: #551a8b; }
+        
+        /* Top Navigation Bar */
+        .top-nav { padding: 10px 20px; font-size: 13px; text-align: left; background: #fff; border-bottom: 1px solid #fff; }
+        .top-nav b { margin-right: 15px; }
+        .top-nav a { margin-right: 15px; text-decoration: none; color: #000; }
+        .top-nav a:hover { text-decoration: underline; }
+
+        /* Branding Area */
+        .header-main { text-align: center; padding-top: 40px; }
+        .google-logo { font-size: 60px; font-weight: bold; font-family: 'Times New Roman', serif; letter-spacing: -2px; }
+        .g-blue { color: #4285f4; } .g-red { color: #ea4335; } .g-yellow { color: #fbbc05; } .g-green { color: #34a853; }
+        
+        .sub-brand { font-size: 18px; color: #666; font-style: italic; margin-top: -10px; }
+
+        /* The Dashboard "Gadgets" - reminiscent of iGoogle 2006 */
+        .container { max-width: 1200px; margin: 20px auto; display: grid; grid-template-columns: 2fr 1fr; gap: 20px; padding: 0 20px; }
+        .gadget { border-top: 1px solid #3366cc; background: #f3f3f3; margin-bottom: 20px; padding: 10px; font-size: 12px; }
+        .gadget-title { background: #e5ecf9; color: #3366cc; font-weight: bold; padding: 5px; margin: -10px -10px 10px -10px; display: flex; justify-content: space-between; }
+        
+        /* Buttons - Old Google Style */
+        .goog-btn { padding: 3px 10px; background: #f8f9fa; border: 1px solid #ccc; font-size: 13px; cursor: pointer; margin: 10px 5px; }
+        .goog-btn:hover { border-color: #999; }
+
+        /* Stats & Data Table */
+        table { width: 100%; border-collapse: collapse; }
+        td { padding: 5px; border-bottom: 1px solid #ddd; }
+        .val { text-align: right; font-weight: bold; font-family: 'Courier New', monospace; }
+        .pos { color: #008000; } .neg { color: #cc0000; }
+
+        /* The Search Box Style Briefing */
+        .briefing-area { text-align: center; margin: 20px 0; }
+        .briefing-box { width: 60%; padding: 10px; border: 1px solid #7f9db9; font-size: 16px; margin-bottom: 10px; background: #fff; display: inline-block; text-align: left; }
     </style>
 </head>
 <body onload="runAudit()">
-<div class="container">
-    <div class="header">
-        <h1 style="letter-spacing: 8px; font-weight: 200; margin: 0;">🏛️ ZAHNLE SOVEREIGN</h1>
-        <button class="update-btn" onclick="runAudit()">🚀 INITIATE UPDATE</button>
-    </div>
 
-    <div id="execBrief" class="brief-box">
-        <strong>EXECUTIVE INTELLIGENCE BRIEF:</strong> Initializing system audit...
-    </div>
+<div class="top-nav">
+    <b>Sovereign</b> 
+    <a href="https://www.google.com/finance/quote/.IXIC:INDEXNASDAQ" target="_blank">NASDAQ</a> 
+    <a href="https://news.google.com" target="_blank">World News</a> 
+    <a href="https://www.redfin.com/county/3072/WA/Asotin-County/housing-market" target="_blank">Maps (99403)</a> 
+    <a href="https://client.schwab.com/app/accounts/positions/#/" target="_blank">Schwab</a> 
+    <a href="https://digitalomni.navyfederal.org/signin/?NFCUSIGNOFF=2" target="_blank">NFCU</a>
+</div>
 
-    <div class="stat-grid">
-        <div class="stat-box"><small>EMPIRE NET WORTH</small><div id="totalNW">$0</div></div>
-        <div class="stat-box"><small>HILL ADVANTAGE</small><div class="pos">+223%</div></div>
-        <div class="stat-box"><small>UNIFIED LIQUIDITY</small><div id="totalLiq" class="pos">$0</div></div>
-        <div class="stat-box"><small>FICO STATUS</small><div>758</div></div>
+<div class="header-main">
+    <div class="google-logo">
+        <span class="g-blue">Z</span><span class="g-red">a</span><span class="g-yellow">h</span><span class="g-blue">n</span><span class="g-green">l</span><span class="g-red">e</span>
     </div>
-
-    <div class="main-grid">
-        <div class="card" style="border-color: var(--blue);">
-            <h2 style="color: var(--blue);">🌍 GLOBAL INTELLIGENCE PORTAL</h2>
-            <div style="font-size: 0.85rem;">
-                <p><strong>Macro:</strong> <a href="https://www.google.com/finance/quote/.IXIC:INDEXNASDAQ" target="_blank">NASDAQ Live</a> | <a href="https://www.cnbc.com/world-markets/" target="_blank">World Markets</a></p>
-                <p><strong>Real Estate:</strong> <a href="https://www.redfin.com/county/3072/WA/Asotin-County/housing-market" target="_blank">99403 Intel</a> | <a href="https://www.redfin.com/zipcode/83501/housing-market" target="_blank">83501 Intel</a></p>
-            </div>
+    <div class="sub-brand">Home of the Hill Command</div>
+    
+    <div class="briefing-area">
+        <div id="execBrief" class="briefing-box">
+            Loading morning intelligence...
         </div>
+        <br>
+        <button class="goog-btn" onclick="runAudit()">Sovereign Search</button>
+        <button class="goog-btn" onclick="window.open('https://www.google.com/search?q=48+year+old+average+net+worth+2026')">I'm Feeling Lucky</button>
+    </div>
+</div>
 
-        <div class="card">
-            <h2>🏦 BANKING & LIQUIDITY <span>NAVY FED</span></h2>
+<div class="container">
+    <div class="left-col">
+        <div class="gadget">
+            <div class="gadget-title"><span>Banking & Liquidity</span> <a href="#">edit</a></div>
             <table>
-                <tr><td>[NFCU Checking](https://digitalomni.navyfederal.org/signin/?NFCUSIGNOFF=2)</td><td class="val">$2,126.52</td></tr>
+                <tr><td>NFCU Checking (...904)</td><td class="val">$2,126.52</td></tr>
                 <tr><td>NFCU Savings</td><td class="val">$1,820.38</td></tr>
                 <tr><td>Judy's Strategic Capital</td><td class="val pos">+$76,600.98</td></tr>
-                <tr style="background: rgba(149, 213, 178, 0.1);"><td><strong>Unified Cash Base</strong></td><td class="val pos">$80,547.88</td></tr>
+                <tr style="background:#e5ecf9"><td><b>Unified Cash Base</b></td><td class="val pos">$80,547.88</td></tr>
             </table>
         </div>
 
-        <div class="card">
-            <h2>📈 THE BITS: SCHWAB (...902)</h2>
+        <div class="gadget">
+            <div class="gadget-title"><span>Stock Portfolio (The Bits)</span> <a href="#">edit</a></div>
             <table>
-                <tr><td>[Micron (MU)](https://client.schwab.com/app/accounts/positions/#/)</td><td class="val pos">$5,489.84</td></tr>
-                <tr><td>[BlackRock (BLK)](https://client.schwab.com/app/accounts/positions/#/)</td><td class="val">$4,647.78</td></tr>
-                <tr><td>[NVIDIA (NVDA)](https://client.schwab.com/app/accounts/positions/#/)</td><td class="val">$2,717.25</td></tr>
-                <tr><td>[Apollo (APO)](https://client.schwab.com/app/accounts/positions/#/)</td><td class="val pos">$2,862.86</td></tr>
+                <tr><td><a href="https://client.schwab.com/app/accounts/positions/#/">Micron (MU)</a></td><td class="val pos">$5,489.84</td></tr>
+                <tr><td><a href="https://client.schwab.com/app/accounts/positions/#/">BlackRock (BLK)</a></td><td class="val">$4,647.78</td></tr>
+                <tr><td><a href="https://client.schwab.com/app/accounts/positions/#/">NVIDIA (NVDA)</a></td><td class="val">$2,717.25</td></tr>
+                <tr><td><a href="https://client.schwab.com/app/accounts/positions/#/">Apollo (APO)</a></td><td class="val pos">$2,862.86</td></tr>
             </table>
         </div>
+    </div>
 
-        <div class="card">
-            <h2>💰 MONTHLY INFLOW <span>GROUND TRUTH</span></h2>
+    <div class="right-col">
+        <div class="gadget">
+            <div class="gadget-title"><span>Empire Stats</span></div>
+            <p>Net Worth: <span id="totalNW" style="font-weight:bold">$0</span></p>
+            <p>Liquidity: <span id="totalLiq" class="pos" style="font-weight:bold">$0</span></p>
+            <p>FICO: <b>758</b></p>
+            <p>Age Benchmark: <b>+223% vs Median</b></p>
+        </div>
+
+        <div class="gadget">
+            <div class="gadget-title"><span>Monthly Inflow</span></div>
             <table>
-                <tr><td>VA Fixed Deposit (1st)</td><td class="val pos">+$2,214.00</td></tr>
-                <tr><td>Judy SS Deposit</td><td class="val pos">+$1,450.00</td></tr>
-                <tr><td>CD Accrual (Fixed)</td><td class="val pos">+$265.15</td></tr>
+                <tr><td>VA Deposit</td><td class="val pos">+$2,214.00</td></tr>
+                <tr><td>Judy SS</td><td class="val pos">+$1,450.00</td></tr>
+                <tr><td>CD Yield</td><td class="val pos">+$265.15</td></tr>
             </table>
         </div>
     </div>
@@ -82,11 +114,10 @@
 
 <script>
     function runAudit() {
-        // GROUND TRUTH FORMULAS
         const nfcuTotal = 80547.88;
         const schwabTotal = 46184.71;
         const hillValue = 425000.00;
-        const debt = 37134.87; // Wall + Amex
+        const debt = 37134.87; 
         
         const unifiedLiq = nfcuTotal + schwabTotal;
         const netWorth = (unifiedLiq + hillValue) - debt;
@@ -94,14 +125,10 @@
         document.getElementById('totalLiq').innerText = '$' + unifiedLiq.toLocaleString();
         document.getElementById('totalNW').innerText = '$' + netWorth.toLocaleString();
         
-        const brief = `
-            <strong>EXECUTIVE COMMAND REPORT:</strong> Audit successful. Your unified liquidity of <strong>$${unifiedLiq.toLocaleString()}</strong> provides a massive shield. 
-            You are currently outperforming the 48-year-old median by <strong>223%</strong>. 
-            <strong>Priority:</strong> The $316.66 Medicare leak is the only active erosion point. 
-            Micron (MU) remains your primary engine in the Bits sector.
-        `;
+        const brief = "<b>MARCH 13 AUDIT:</b> Empire worth <b>$" + netWorth.toLocaleString() + "</b>. You are outperforming the 48yo median by 223%. MU position is healthy. No new leaks detected.";
         document.getElementById('execBrief').innerHTML = brief;
     }
 </script>
+
 </body>
 </html>
