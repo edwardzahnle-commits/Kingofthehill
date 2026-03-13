@@ -10,15 +10,17 @@
         .header { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--leaf); }
         .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin: 20px 0; }
         .stat-box { background: rgba(45, 106, 79, 0.2); border: 1px solid var(--leaf); padding: 20px; border-radius: 12px; text-align: center; backdrop-filter: blur(5px); }
-        .stat-box div { font-size: 1.8rem; font-weight: bold; margin-top: 5px; }
-        .main-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; }
+        .stat-box div { font-size: 2rem; font-weight: bold; margin-top: 5px; }
+        .main-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 20px; }
         .card { background: rgba(20, 40, 30, 0.7); border: 1px solid var(--leaf); border-radius: 12px; padding: 20px; height: fit-content; }
         .card h2 { font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; color: var(--glow); border-bottom: 1px solid var(--leaf); padding-bottom: 10px; margin-top: 0; display: flex; justify-content: space-between; }
         table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
-        td { padding: 8px 4px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        td { padding: 10px 4px; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
         .val { text-align: right; font-weight: bold; font-family: 'Consolas', monospace; }
         .pos { color: var(--glow); } .neg { color: var(--leak); }
-        .prof-g-box { border-left: 5px solid var(--gold); background: rgba(242, 224, 0, 0.05); padding: 15px; border-radius: 0 12px 12px 0; color: var(--gold); font-style: italic; margin-bottom: 20px; font-size: 0.9rem; }
+        .launch-link { color: var(--blue); text-decoration: none; font-weight: bold; }
+        .launch-link:hover { color: var(--glow); text-decoration: underline; }
+        .prof-g-box { border-left: 5px solid var(--gold); background: rgba(242, 224, 0, 0.05); padding: 15px; border-radius: 0 12px 12px 0; color: var(--gold); font-style: italic; margin-bottom: 20px; font-size: 0.95rem; }
         .update-btn { background: var(--blue); color: #040d08; border: none; padding: 8px 16px; border-radius: 5px; font-weight: bold; cursor: pointer; text-transform: uppercase; font-size: 0.75rem; }
     </style>
 </head>
@@ -30,22 +32,31 @@
     </div>
 
     <div class="prof-g-box">
-        <strong>DIRECTIVE:</strong> "Sovereignty is the ability to walk away. Unified liquidity is the fuel for your freedom. Do not let the bits erode."
+        <strong>DIRECTIVE:</strong> "The only thing that matters is how much you own and who you owe. Use the bits to secure the atoms and maintain the Hill."
     </div>
 
     <div class="stat-grid">
-        <div class="stat-box"><small>TOTAL NET WORTH</small><div>$552,184</div></div>
+        <div class="stat-box"><small>EMPIRE NET WORTH</small><div>$552,184</div></div>
         <div class="stat-box"><small>UNIFIED LIQUIDITY</small><div class="pos">$126,738</div></div>
-        <div class="stat-box"><small>TOTAL MARKET VAL</small><div>$46,178</div></div>
-        <div class="stat-box"><small>FICO SCORE</small><div>758</div></div>
+        <div class="stat-box"><small>SCHWAB BITS</small><div>$46,178</div></div>
+        <div class="stat-box"><small>FICO STATUS</small><div>758</div></div>
     </div>
 
     <div class="main-grid">
+        <div class="card" style="border-color: var(--blue);">
+            <h2 style="color: var(--blue);">🌍 GLOBAL INTELLIGENCE PORTAL</h2>
+            <div style="font-size: 0.85rem;">
+                <p><strong>Macro Watch:</strong> <a href="https://www.cnbc.com/world-markets/" class="launch-link">World Markets</a> | <a href="https://www.google.com/finance/quote/.IXIC:INDEXNASDAQ" class="launch-link">NASDAQ Live</a></p>
+                <p><strong>Intelligence:</strong> <a href="https://news.google.com/topics/CAAqJggKIiBDQkFTRWdvSUwyMHZNRGx1YlY4U00xSlpSVTU2S0FBU0FRLS" class="launch-link">World News</a> | <a href="https://www.reuters.com/business/" class="launch-link">Business Desk</a></p>
+                <p><strong>Yesterday Position:</strong> [MU](https://client.schwab.com/app/accounts/positions/#/) (+4.18%) neutralized Tech drag. Today MU is posed for breakout.</p>
+            </div>
+        </div>
+
         <div class="card">
-            <h2>🏦 BANKING & LIQUIDITY <span>NFCU UNIFIED</span></h2>
+            <h2>🏦 BANKING & CASH FLOW <span>MINE & JUDY</span></h2>
             <table>
-                <tr><td>[NFCU Checking (...904)](https://digitalomni.navyfederal.org/nfcu-online-banking/accounts/list/summary)</td><td class="val">$2,126.52</td></tr>
-                <tr><td>NFCU Savings (Main)</td><td class="val">$1,820.38</td></tr>
+                <tr><td>[NFCU Checking (...904)](https://digitalomni.navyfederal.org/signin/?NFCUSIGNOFF=2)</td><td class="val">$2,126.52</td></tr>
+                <tr><td>NFCU Main Savings</td><td class="val">$1,820.38</td></tr>
                 <tr><td>Judy's Strategic Capital</td><td class="val pos">+$76,600.98</td></tr>
                 <tr><td>Schwab Cash Sweep</td><td class="val">$6.67</td></tr>
                 <tr style="background: rgba(149, 213, 178, 0.1);"><td><strong>Total Strike-Force Cash</strong></td><td class="val pos">$80,554.55</td></tr>
@@ -56,68 +67,58 @@
             <h2>📜 CERTIFICATES & YIELD</h2>
             <table>
                 <tr><td>NFCU CD Principal</td><td class="val">$45,000.00</td></tr>
-                <tr><td>Annual Yield (Est)</td><td class="val pos">5.15%</td></tr>
-                <tr><td>Monthly CD Accrual</td><td class="val pos">+$265.15</td></tr>
-                <tr><td>Maturity Date</td><td class="val">Jan 2027</td></tr>
+                <tr><td>Monthly CD Interest (1st)</td><td class="val pos">+$265.15</td></tr>
+                <tr><td>Yield Rating</td><td class="val pos">5.15% APY</td></tr>
+                <tr><td>Maturity Cycle</td><td class="val">Jan 2027</td></tr>
             </table>
         </div>
 
         <div class="card">
-            <h2>📈 THE BITS: SCHWAB (...902) <span>+$309.89 Today</span></h2>
+            <h2>📈 THE BITS: SCHWAB (...902) <span>+$309.89 TODAY</span></h2>
             <table>
-                <tr><td>[Micron (MU)](https://client.schwab.com/app/accounts/positions/#/)</td><td class="val pos">$5,489.84</td></tr>
-                <tr><td>[BlackRock (BLK)](https://client.schwab.com/app/accounts/positions/#/)</td><td class="val">$4,647.78</td></tr>
-                <tr><td>[NVIDIA (NVDA)](https://client.schwab.com/app/accounts/positions/#/)</td><td class="val">$2,717.25</td></tr>
-                <tr><td>[Apollo (APO)](https://client.schwab.com/app/accounts/positions/#/)</td><td class="val pos">$2,862.86</td></tr>
-                <tr><td>[TPG Inc (TPG)](https://client.schwab.com/app/accounts/positions/#/)</td><td class="val pos">$1,996.50</td></tr>
-                <tr><td>[Apple (AAPL)](https://client.schwab.com/app/accounts/positions/#/)</td><td class="val neg">$2,021.04</td></tr>
+                <tr><td>[Micron (MU)](https://client.schwab.com/Areas/Access/Login?LogoutMessageCode=SessionExpired)</td><td class="val pos">$5,489.84</td></tr>
+                <tr><td>[BlackRock (BLK)](https://client.schwab.com/Areas/Access/Login?LogoutMessageCode=SessionExpired)</td><td class="val">$4,647.78</td></tr>
+                <tr><td>[NVIDIA (NVDA)](https://client.schwab.com/Areas/Access/Login?LogoutMessageCode=SessionExpired)</td><td class="val">$2,717.25</td></tr>
+                <tr><td>[Apollo (APO)](https://client.schwab.com/Areas/Access/Login?LogoutMessageCode=SessionExpired)</td><td class="val pos">$2,862.86</td></tr>
+                <tr><td>[TPG Inc (TPG)](https://client.schwab.com/Areas/Access/Login?LogoutMessageCode=SessionExpired)</td><td class="val pos">$1,996.50</td></tr>
             </table>
         </div>
 
-        <div class="card" style="border-color: var(--gold);">
-            <h2 style="color: var(--gold);">📡 POSITION RUNDOWN</h2>
-            <div style="font-size: 0.8rem;">
-                <strong>Yesterday:</strong> Market drag from [NASDAQ](https://client.schwab.com/app/accounts/positions/#/) (-0.45%) hit NVDA/AAPL, but your [MU](https://client.schwab.com/app/accounts/positions/#/) (+4.18%) neutralized the loss.
-                <br><br>
-                <strong>The Pivot:</strong> MU is posed to challenge $430 resistance. BLK and APO are acting as high-yield defensive anchors in high-volatility sessions.
-            </div>
-        </div>
-
         <div class="card">
-            <h2>💰 MONTHLY CASH FLOW</h2>
+            <h2>💰 MONTHLY INFLOW <span>GROUND TRUTH</span></h2>
             <table>
                 <tr><td>VA Fixed Deposit (1st)</td><td class="val pos">+$2,214.00</td></tr>
                 <tr><td>Judy SS Deposit</td><td class="val pos">+$1,450.00</td></tr>
-                <tr><td>CD/Investment Yield</td><td class="val pos">+$307.45</td></tr>
-                <tr style="border-top: 1px solid var(--leaf);"><td><strong>Total Inflow</strong></td><td class="val pos">$3,971.45</td></tr>
+                <tr><td>Total Monthly CD/Yield</td><td class="val pos">+$307.45</td></tr>
+                <tr style="border-top: 1px solid var(--leaf);"><td><strong>Total Cash Velocity</strong></td><td class="val pos">$3,971.45</td></tr>
             </table>
-        </div>
-
-        <div class="card" style="border-color: var(--blue);">
-            <h2 style="color: var(--blue);">🌍 GLOBAL MACRO WATCH</h2>
-            <div style="font-size: 0.8rem;">
-                <strong>NASDAQ Status:</strong> 22,211.91 (<strong>-0.45%</strong>). Small-caps are leading while mega-tech consolidates.
-                <br><br>
-                <strong>Mission:</strong> Medicare leak dispute ($316.66) is the #1 defensive priority.
-            </div>
         </div>
 
         <div class="card">
             <h2>🏗️ THE HILL (ATOMS) <span>GOAL: $1M</span></h2>
             <table>
-                <tr><td>2458 Westwood Value</td><td class="val">$425,000.00</td></tr>
-                <tr><td>Wall Debt Contract</td><td class="val neg">-$37,000.00</td></tr>
+                <tr><td>2458 Westwood Base</td><td class="val">$425,000.00</td></tr>
+                <tr><td>Wall Contract Debt</td><td class="val neg">-$37,000.00</td></tr>
                 <tr><td>Bobcat Net Equity</td><td class="val pos">+$15,000.00</td></tr>
             </table>
         </div>
 
         <div class="card">
-            <h2>🛡️ SHIELDS & REPUTATION</h2>
+            <h2>🛡️ SHIELDS & LIABILITIES</h2>
             <table>
-                <tr><td>Amex Gold (Mar 27)</td><td class="val neg">-$134.87</td></tr>
+                <tr><td>Amex Gold (Due Mar 27)</td><td class="val neg">-$134.87</td></tr>
                 <tr><td>NFCU Power Card Limit</td><td class="val pos">$18,000.00</td></tr>
-                <tr><td>FICO Status</td><td class="val pos">758</td></tr>
+                <tr><td>Medicare Leak (Audit)</td><td class="val neg">-$316.66</td></tr>
             </table>
+        </div>
+
+        <div class="card">
+            <h2>📋 LEADERSHIP & MENTORSHIP</h2>
+            <div style="font-size: 0.8rem;">
+                • Mentee Audit: Reviewing progress of the men.<br>
+                • Strategic Planning: Preparing for Voc Rehab activation.<br>
+                • Project Site: Check wall integrity Wednesday.
+            </div>
         </div>
     </div>
 </div>
