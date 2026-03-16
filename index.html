@@ -2,97 +2,119 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Monday Sovereign Dashboard - March 16, 2026</title>
+    <title>Sovereign Command Dashboard - March 16, 2026</title>
     <style>
-        body { background: #f8f9fa; font-family: 'Segoe UI', Arial, sans-serif; margin: 0; }
-        .top-nav { background: #202124; color: white; padding: 10px 20px; display: flex; gap: 20px; font-size: 13px; }
-        .hot-link { color: #8ab4f8; text-decoration: none; font-weight: bold; }
-        .hot-link:hover { text-decoration: underline; }
-        .header { text-align: center; padding: 30px; background: white; border-bottom: 1px solid #ddd; }
-        .empire-total { font-size: 48px; color: #1e8e3e; font-weight: bold; margin: 10px 0; }
-        .container { max-width: 1400px; margin: 20px auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; padding: 0 20px; }
-        .card { background: white; border: 1px solid #dee2e6; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .card-header { background: #e8f0fe; color: #1967d2; padding: 12px; font-weight: bold; border-bottom: 1px solid #dee2e6; }
-        .card-content { padding: 15px; font-size: 14px; }
-        .stat-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #eee; }
-        .val { font-family: 'Courier New', monospace; font-weight: bold; }
-        .alpha-tag { background: #e6f4ea; color: #1e8e3e; padding: 2px 6px; border-radius: 4px; font-size: 12px; }
-        .task-list { list-style: none; padding: 0; }
-        .task-item { padding: 10px; border-left: 4px solid #d93025; background: #fff8f7; margin-bottom: 8px; }
+        body { background: #f1f3f4; font-family: 'Roboto', Arial, sans-serif; margin: 0; color: #202124; }
+        .top-nav { background: #1a73e8; color: white; padding: 12px 24px; display: flex; gap: 25px; font-weight: 500; font-size: 14px; }
+        .hot-link { color: #ffffff; text-decoration: none; border-bottom: 1px solid transparent; }
+        .hot-link:hover { border-bottom: 1px solid white; }
+        .header { background: white; padding: 40px 20px; text-align: center; border-bottom: 1px solid #dadce0; }
+        .empire-total { font-size: 56px; color: #188038; font-weight: 700; margin: 10px 0; letter-spacing: -1px; }
+        .alpha-badge { background: #ceead6; color: #0d652d; padding: 6px 12px; border-radius: 20px; font-weight: bold; font-size: 14px; }
+        .container { max-width: 1500px; margin: 24px auto; display: grid; grid-template-columns: 1.2fr 1.8fr 1fr; gap: 24px; padding: 0 24px; }
+        .card { background: white; border-radius: 8px; border: 1px solid #dadce0; overflow: hidden; }
+        .card-header { background: #f8f9fa; padding: 14px 20px; font-weight: bold; font-size: 15px; color: #3c4043; border-bottom: 1px solid #dadce0; display: flex; justify-content: space-between; }
+        .card-content { padding: 20px; }
+        .fin-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .fin-table th { text-align: left; color: #70757a; font-weight: 500; border-bottom: 1px solid #eee; padding-bottom: 8px; }
+        .fin-table td { padding: 10px 0; border-bottom: 1px solid #f1f3f4; }
+        .val { font-family: 'Roboto Mono', monospace; font-weight: bold; text-align: right; }
+        .pos { color: #188038; } .neg { color: #d93025; }
+        .task-item { padding: 12px; border-left: 4px solid #f4b400; background: #fffcf0; margin-bottom: 10px; border-radius: 0 4px 4px 0; font-size: 13px; }
     </style>
 </head>
 <body>
 
 <div class="top-nav">
-    <b>Quick Command:</b>
-    <a class="hot-link" href="https://client.schwab.com/app/accounts/summary/" target="_blank">Schwab</a>
-    <a class="hot-link" href="https://digitalomni.navyfederal.org/nfcu-online-banking/accounts/list/summary" target="_blank">Navy Fed</a>
-    <a class="hot-link" href="https://www.creditkarma.com/credit-health/transunion/credit-report" target="_blank">Credit Report</a>
-    <a class="hot-link" href="https://github.com/edwardzahnle-commits/Kingofthehill" target="_blank">GitHub Repo</a>
+    <b>Sovereign Portal:</b>
+    <a class="hot-link" href="https://client.schwab.com/app/accounts/positions/#/" target="_blank">Schwab Summary</a>
+    <a class="hot-link" href="https://digitalomni.navyfederal.org/nfcu-online-banking/accounts/list/summary" target="_blank">Navy Fed Command</a>
+    <a class="hot-link" href="https://online.wafdbank.com/p/Dashboard" target="_blank">WaFd Banking</a>
+    <a class="hot-link" href="https://www.creditkarma.com/credit-health/transunion/credit-report" target="_blank">Credit Karma</a>
 </div>
 
 <div class="header">
-    <div style="font-size: 14px; color: #5f6368; text-transform: uppercase; letter-spacing: 1px;">Empire Net Worth</div>
-    <div class="empire-total">$532,032.71</div>
-    <div class="alpha-tag">Elite Alpha: +115% vs. Age 48 Median ($247k)</div>
+    <div style="font-size: 12px; color: #70757a; text-transform: uppercase; font-weight: bold; letter-spacing: 2px;">Zahnle Consolidated Empire</div>
+    <div class="empire-total" id="grandTotal">$533,059.12</div>
+    <span class="alpha-badge">Elite Alpha Status: +115% Over Age 48 Median</span>
 </div>
 
 <div class="container">
-    <div class="card">
-        <div class="card-header">The Bits: Investment Portfolio</div>
-        <div class="card-content">
-            <div class="stat-row"><span>Total Schwab Value</span><span class="val">$60,846.35</span></div>
-            <div class="stat-row"><span>Individual (...902)</span><span class="val">$46,154.50</span></div>
-            <div class="stat-row"><span>Roth IRA (...092)</span><span class="val">$14,689.99</span></div>
-            <div style="margin-top:15px; font-size:11px; color:#666;">
-                <b>Top Bits:</b> BLK ($8,316), MU ($5,539), APO ($2,924), NVDA ($2,709).
+    <div class="col">
+        <div class="card">
+            <div class="card-header">Liquidity Shield</div>
+            <div class="card-content">
+                <table class="fin-table">
+                    <tr><td>EveryDay Checking (NFCU)</td><td class="val">$13,326.52</td></tr>
+                    <tr><td>Judy Easy Checking (NFCU)</td><td class="val">$30,465.54</td></tr>
+                    <tr><td>Free Checking (WaFd)</td><td class="val pos">$1,026.41</td></tr>
+                    <tr><td><b>Total Liquid Cash</b></td><td class="val pos">$44,818.47</td></tr>
+                </table>
             </div>
         </div>
-        <div class="card-header">The Shield: Navy Federal</div>
-        <div class="card-content">
-            <div class="stat-row"><span>Unified Liquid Cash</span><span class="val">$47,612.44</span></div>
-            <div class="stat-row"><span>5 Certificates (CDs)</span><span class="val">$35,573.92</span></div>
-            <div class="stat-row"><span>Judy Checking (...8430)</span><span class="val">$43,665.54</span></div>
+        <div class="card" style="margin-top: 24px;">
+            <div class="card-header">Credit & Financial Health</div>
+            <div class="card-content">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span>Credit Score (Vantage 3.0)</span>
+                    <span class="val pos" style="font-size: 24px;">758</span>
+                </div>
+                <div style="font-size: 11px; color: #70757a; margin-top: 8px;">TransUnion Report as of March 13, 2026</div>
+            </div>
         </div>
     </div>
 
-    <div class="card">
-        <div class="card-header">Monday Task Master</div>
-        <div class="card-content">
-            <ul class="task-list">
-                <li class="task-item"><b>Mortgage Check:</b> Verify Saturday's $1,341.41 Rocket Mortgage draft cleared.</li>
-                <li class="task-item"><b>Medicare Leak:</b> Resolve the $316.66 Mutual of Omaha dispute today.</li>
-                <li class="task-item"><b>Remodel Prep:</b> Tomorrow 10AM meeting with Starr Studios (Catherine).</li>
-                <li class="task-item"><b>Legal Signature:</b> Take Judy to Notary for Quitclaim Deed.</li>
-            </ul>
-        </div>
-        <div class="card-header">Prof G Intelligence</div>
-        <div class="card-content" style="font-style: italic; color: #555;">
-            "Sovereignty is the absence of economic anxiety."
-            <ul style="font-style: normal; font-size: 12px; margin-top: 10px;">
-                <li>The $35k CD ladder is your "bulletproof vest."</li>
-                <li>Your $60k in Bits is the engine for 2026.</li>
-            </ul>
+    <div class="col">
+        <div class="card">
+            <div class="card-header">
+                <span>Schwab Portfolio Summary</span>
+                <span class="pos" style="font-size: 12px;">+$235.35 (Day)</span>
+            </div>
+            <div class="card-content">
+                <table class="fin-table">
+                    <thead>
+                        <tr><th>Symbol</th><th>Qty</th><th>Price</th><th style="text-align:right">Market Value</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><b>MU</b> (Micron)</td><td>13</td><td>$424.99</td><td class="val">$5,524.98</td></tr>
+                        <tr><td><b>BLK</b> (BlackRock)</td><td>9</td><td>$923.95</td><td class="val">$8,315.55</td></tr>
+                        <tr><td><b>NVDA</b> (Nvidia)</td><td>15</td><td>$180.19</td><td class="val">$2,702.97</td></tr>
+                        <tr><td><b>APO</b> (Apollo)</td><td>28</td><td>$104.23</td><td class="val">$2,918.44</td></tr>
+                        <tr><td><b>AMZN</b> (Amazon)</td><td>10</td><td>$206.82</td><td class="val">$2,068.25</td></tr>
+                        <tr><td><b>CRWD</b> (Crowdstrike)</td><td>3</td><td>$441.40</td><td class="val">$1,324.20</td></tr>
+                        <tr style="background: #f8f9fa;">
+                            <td colspan="3"><b>Individual Account (...902)</b></td>
+                            <td class="val"><b>$46,110.17</b></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
 
-    <div class="card">
-        <div class="card-header">Credit & Stats</div>
-        <div class="card-content">
-            <div class="stat-row"><span>Credit Report Status</span><span class="val">Excellent</span></div>
-            <div class="stat-row"><span>Property Equity (Atoms)</span><span class="val">$388,000.00</span></div>
-            <hr>
-            <div style="font-size: 12px; color: #666;">
-                <b>Global Outlook:</b> Rain has stopped; tractor work on The Hill can resume. NASDAQ under pressure (-0.93% Friday). 
+    <div class="col">
+        <div class="card">
+            <div class="card-header">Monday Task Master</div>
+            <div class="card-content">
+                <div class="task-item"><b>Medicare Leak:</b> Audit Mutual of Omaha for the $316.66 dispute.</div>
+                <div class="task-item"><b>Remodel:</b> 10 AM Tomorrow - Meet Catherine at Starr Studios.</div>
+                <div class="task-item"><b>Legal:</b> Sign Quitclaim deed at Clarkston City Clerk (Free Notary).</div>
             </div>
         </div>
-        <div class="card-header">Quick Login Tabs</div>
-        <div class="card-content">
-            <button onclick="window.open('https://client.schwab.com/app/accounts/summary/')">Schwab Login</button>
-            <button onclick="window.open('https://digitalomni.navyfederal.org/signin')">NFCU Login</button>
+        <div class="card" style="margin-top: 24px;">
+            <div class="card-header">The Hill (Atoms)</div>
+            <div class="card-content">
+                <table class="fin-table">
+                    <tr><td>Westwood CT Equity</td><td class="val">$388,000.00</td></tr>
+                    <tr><td>Equipment Assets</td><td class="val pos">+$15,000.00</td></tr>
+                </table>
+            </div>
         </div>
     </div>
 </div>
+
+</body>
+</html>
 
 </body>
 </html>
