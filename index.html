@@ -2,118 +2,122 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sovereign Command v33.0 - Full Spectrum</title>
+    <title>Sovereign Command v34.0 - March 16, 2026</title>
     <style>
         :root { --g-blue: #4285f4; --g-red: #ea4335; --g-yellow: #fbbc05; --g-green: #34a853; --dark: #202124; --border: #dadce0; }
-        body { background: #f1f3f4; font-family: 'Roboto', 'Segoe UI', sans-serif; margin: 0; color: #3c4043; }
-        .top-nav { background: var(--dark); color: white; padding: 12px 25px; display: flex; gap: 20px; font-size: 13px; align-items: center; }
+        body { background: #f4f6f8; font-family: 'Segoe UI', system-ui, sans-serif; margin: 0; color: #3c4043; }
+        .top-nav { background: var(--dark); color: white; padding: 10px 20px; display: flex; gap: 20px; font-size: 13px; align-items: center; }
         .hot-link { color: #8ab4f8; text-decoration: none; font-weight: bold; }
-        .header { background: white; padding: 30px 20px; text-align: center; border-bottom: 1px solid var(--border); }
-        .empire-total { font-size: 56px; color: var(--g-green); font-weight: 800; margin: 5px 0; }
-        .container { max-width: 1700px; margin: 25px auto; display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 20px; padding: 0 25px; }
-        .card { background: white; border-radius: 8px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .header { background: white; padding: 35px 20px; text-align: center; border-bottom: 2px solid var(--border); }
+        .empire-total { font-size: 60px; color: var(--g-green); font-weight: 800; margin: 10px 0; }
+        .container { max-width: 1700px; margin: 25px auto; display: grid; grid-template-columns: 1fr 1.3fr 1fr; gap: 25px; padding: 0 25px; }
+        .card { background: white; border-radius: 12px; border: 1px solid var(--border); overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
         .card-header { background: #f8f9fa; padding: 15px 20px; font-weight: bold; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
         .card-content { padding: 20px; }
         .fin-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-        .fin-table td { padding: 8px 0; border-bottom: 1px solid #f1f3f4; }
+        .fin-table td { padding: 10px 0; border-bottom: 1px solid #f1f3f4; }
         .val { font-family: 'Roboto Mono', monospace; font-weight: bold; text-align: right; }
         .pos { color: var(--g-green); } .neg { color: var(--g-red); }
-        .task-item { padding: 12px; border-left: 4px solid var(--g-red); background: #fff8f7; margin-bottom: 10px; font-size: 13px; border-radius: 0 4px 4px 0; }
-        .status-badge { background: #e8f0fe; color: #1967d2; padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: bold; }
+        .task-item { padding: 12px; border-left: 5px solid var(--g-red); background: #fff8f7; margin-bottom: 10px; font-size: 13px; border-radius: 4px; }
+        .prof-g-box { border-left: 5px solid var(--g-yellow); background: #fffdf0; padding: 15px; font-style: italic; font-size: 13px; }
     </style>
 </head>
-<body>
+<body onload="updateTime()">
 
 <div class="top-nav">
-    <b>Command Center:</b>
-    <a class="hot-link" href="https://client.schwab.com/app/accounts/summary/" target="_blank">Schwab</a>
-    <a class="hot-link" href="https://digitalomni.navyfederal.org/nfcu-online-banking/accounts/list/summary" target="_blank">Navy Fed Command</a>
-    <a class="hot-link" href="https://online.wafdbank.com/p/Dashboard" target="_blank">WaFd Dashboard</a>
-    <a class="hot-link" href="https://www.creditkarma.com/credit-health/transunion/credit-report" target="_blank">Credit Karma</a>
+    <b>Command Portal:</b>
+    <a class="hot-link" href="https://client.schwab.com/app/accounts/positions/#/" target="_blank">Schwab Summary</a>
+    <a class="hot-link" href="https://digitalomni.navyfederal.org/nfcu-online-banking/accounts/list/summary" target="_blank">Navy Fed Portal</a>
+    <a class="hot-link" href="https://online.wafdbank.com/p/Dashboard" target="_blank">WaFd Banking</a>
+    <a class="hot-link" href="https://www.creditkarma.com/credit-health/transunion/credit-report" target="_blank">Credit Health</a>
 </div>
 
 <div class="header">
-    <div style="font-size: 12px; font-weight: bold; letter-spacing: 2px; color: #70757a; text-transform: uppercase;">Zahnle Consolidated Empire - Sovereign Status</div>
-    <div class="empire-total">$533,741.87</div>
-    <div style="font-weight: bold; color: var(--g-blue);">Elite Alpha: +123% vs. US Median 48yo ($247k)</div>
+    <div style="font-size: 12px; font-weight: bold; letter-spacing: 2px; color: #70757a; text-transform: uppercase;">Zahnle Consolidated Command - Active Net Worth</div>
+    <div class="empire-total" id="netWorth">$534,422.38</div>
+    <div style="font-weight: bold; color: var(--g-blue);" id="lastAudit">Elite Alpha: +124% vs. US Median ($247k)</div>
 </div>
 
 <div class="container">
     <div class="col">
         <div class="card">
-            <div class="card-header">Liquidity Shield (Cash) <span class="status-badge">Live TABS</span></div>
+            <div class="card-header">Liquidity Shield (Cash) <span>Verified COB</span></div>
             <div class="card-content">
                 <table class="fin-table">
-                    <tr><td>NFCU EveryDay (...1104)</td><td class="val">$13,326.52</td></tr>
+                    <tr><td>NFCU Everyday (...1104)</td><td class="val">$13,326.52</td></tr>
                     <tr><td>Judy Easy Checking (...8430)</td><td class="val">$30,465.54</td></tr>
                     <tr><td>WaFd Free Checking (...6785)</td><td class="val pos">$1,026.41</td></tr>
-                    <tr><td><b>Unified Cash Total</b></td><td class="val pos">$44,818.47</td></tr>
+                    <tr style="background:#eef"><td><b>Unified Cash Base</b></td><td class="val pos">$44,818.47</td></tr>
                 </table>
             </div>
         </div>
-        <div class="card" style="margin-top:20px;">
-            <div class="card-header">Leaks & Disputes <span class="neg" style="font-size:12px;">Active Monitoring</span></div>
-            <div class="card-content">
-                <div class="task-item"><b>Medicare Leak:</b> Dispute $316.66 Mutual of Omaha charge today.</div>
-                <div class="task-item"><b>Sony Pictures Invoice:</b> Verify $303.00 charge on credit report.</div>
-                <div class="task-item"><b>Rocket Mortgage:</b> Verify $1,341.41 Saturday draft cleared.</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col">
-        <div class="card">
-            <div class="card-header">Schwab Individual Portfolio (...902) <span class="pos">+$235.35 (1D)</span></div>
+        <div class="card" style="margin-top:25px;">
+            <div class="card-header">5 Certificates (CD Ladder)</div>
             <div class="card-content">
                 <table class="fin-table">
-                    <thead><tr style="color:#70757a"><th>Symbol</th><th>Qty</th><th>Price</th><th style="text-align:right">Market Value</th></tr></thead>
-                    <tr><td><b>MU</b> (Micron)</td><td>13</td><td>$424.99</td><td class="val">$5,524.98</td></tr>
-                    <tr><td><b>BLK</b> (BlackRock)</td><td>5</td><td>$924.00</td><td class="val">$4,620.00</td></tr>
-                    <tr><td><b>NVDA</b> (NVIDIA)</td><td>15</td><td>$180.19</td><td class="val">$2,702.97</td></tr>
-                    <tr><td><b>APO</b> (Apollo)</td><td>28</td><td>$104.23</td><td class="val">$2,918.44</td></tr>
-                    <tr style="background:#e8f0fe"><td><b>Account Total</b></td><td colspan="3" class="val"><b>$46,110.17</b></td></tr>
+                    <tr><td>Edward's CDs (3)</td><td class="val">$7,243.16</td></tr>
+                    <tr><td>Judy's CDs (2)</td><td class="val">$28,342.22</td></tr>
+                    <tr style="background:#fffdf0"><td><b>Total CD Principal</b></td><td class="val pos">$35,585.38</td></tr>
                 </table>
-            </div>
-        </div>
-        <div class="card" style="margin-top:20px;">
-            <div class="card-header">Education & VR&E Status</div>
-            <div class="card-content">
-                <div style="font-size: 13px; margin-bottom: 10px;"><b>CSU Channel Islands:</b> BA Psychology (Fall 2026)</div>
-                <div class="task-item" style="border-left-color: var(--g-blue); background: #f0f7ff;">
-                    <b>VR&E Positive Decision:</b> Received March 12, 2026. 
-                    <br><small>Action: Sign "Next Steps" document and return within 30 days.</small>
-                </div>
-                <div style="font-size: 11px; color: #70757a;">*Transcripts from Saddleback College received by CSUCI on March 12.</div>
             </div>
         </div>
     </div>
 
     <div class="col">
         <div class="card">
-            <div class="card-header">Medical Track (Judy & Ed)</div>
+            <div class="card-header">Schwab Portfolio (The Bits) <span class="pos">+$687.03 Today</span></div>
             <div class="card-content">
-                <div style="margin-bottom: 15px;">
-                    <b style="font-size: 13px;">Upcoming Appointments:</b>
-                    <ul style="font-size: 13px; padding-left: 20px;">
-                        <li><b>Remodel Meeting:</b> Tuesday, March 17 @ 10 AM (Starr Studios).</li>
-                        <li><b>Judy Follow-up:</b> April 8 @ 2:30 PM (Jessica Lewis, FNP-C).</li>
-                    </ul>
-                </div>
-                <div class="task-item"><b>Clarkston City Clerk:</b> Notary for Quitclaim deed today.</div>
+                <table class="fin-table">
+                    <thead><tr style="color:#70757a"><th>Symbol</th><th>Qty</th><th>Mkt Val</th><th style="text-align:right">Day Chg</th></tr></thead>
+                    <tr><td><b>MU</b> (Micron)</td><td>13</td><td>$5,765.50</td><td class="val pos">+$225.81</td></tr>
+                    <tr><td><b>NVDA</b> (NVIDIA)</td><td>15</td><td>$2,727.75</td><td class="val pos">+$24.00</td></tr>
+                    <tr><td><b>APO</b> (Apollo)</td><td>28</td><td>$2,935.80</td><td class="val pos">+$11.48</td></tr>
+                    <tr><td><b>BLK</b> (BlackRock)</td><td>5</td><td>$4,645.00</td><td class="val pos">+$24.45</td></tr>
+                    <tr style="background:#e8f0fe"><td><b>Brokerage Total</b></td><td colspan="3" class="val"><b>$46,561.85</b></td></tr>
+                </table>
+                <p style="font-size:11px; margin-top:10px; color:#666;">Account Market Value: $46,548.88 | Cash: $12.97</p>
             </div>
         </div>
-        <div class="card" style="margin-top:20px;">
-            <div class="card-header">Prof G & Global Outlook</div>
-            <div class="card-content" style="font-style: italic; font-size: 13px;">
-                "Sovereignty is the engine of the innovation class."
-                <ul style="font-style: normal; margin-top: 10px; font-size: 12px;">
-                    <li><b>Market Support:</b> Tech holdings MU and NVDA showing resilience.</li>
-                    <li><b>Hill Status:</b> Rain has cleared. Resume property optimization.</li>
-                </ul>
+        <div class="card" style="margin-top:25px;">
+            <div class="card-header">Education Status (VR&E)</div>
+            <div class="card-content">
+                <div class="task-item" style="border-left-color: var(--g-blue); background: #f0f7ff;">
+                    <b>VA VR&E Positive Decision:</b> Received March 12, 2026.
+                    <br><small>Action Required: Sign and return "Next Steps" document for CSU Channel Islands Fall 2026.</small>
+                </div>
+                <div style="font-size: 11px; color:#70757a;">*Transcripts verified received by CSUCI Admissions on March 12.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card">
+            <div class="card-header">Monday Task Master</div>
+            <div class="card-content">
+                <div class="task-item"><b>Medicare Leak:</b> Dispute the $316.66 charge today via the Asotin Courthouse.</div>
+                <div class="task-item"><b>Sony Invoice:</b> Verify $303.00 dispute progress on credit report.</div>
+                <div class="task-item"><b>Remodel:</b> 10 AM Tomorrow - Meeting with Catherine (Starr Studios).</div>
+                <div class="task-item"><b>Judy Med:</b> April 8 @ 2:30 PM - Jessica Lewis, FNP-C (St. Joseph).</div>
+            </div>
+        </div>
+        <div class="card" style="margin-top:25px;">
+            <div class="card-header">Prof G & Credit Health</div>
+            <div class="card-content">
+                <div class="prof-g-box">"Sovereignty is the ability to walk away." - Focus on the Bits (AMZN/MU) and protect the Hill.</div>
+                <table class="fin-table" style="margin-top:15px;">
+                    <tr><td>TransUnion Score</td><td class="val pos">758</td></tr>
+                    <tr><td>Net Property Equity</td><td class="val pos">$388,000.00</td></tr>
+                </table>
             </div>
         </div>
     </div>
 </div>
 
+<script>
+    function updateTime() {
+        const now = new Date();
+        console.log("Dashboard Active: " + now.toLocaleDateString());
+    }
+</script>
 </body>
 </html>
