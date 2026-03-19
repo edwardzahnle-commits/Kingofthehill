@@ -2,131 +2,108 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sovereign Command v41.0 - Full Spectrum</title>
+    <title>Sovereign Command v42.0 - Thursday High Fidelity</title>
     <style>
-        :root { --g-blue: #4285f4; --g-red: #ea4335; --g-yellow: #fbbc05; --g-green: #34a853; --dark: #171717; --border: #dadce0; }
-        body { background: #0f0f0f; font-family: 'Inter', 'Roboto', sans-serif; margin: 0; color: #e0e0e0; }
-        .top-nav { background: var(--dark); padding: 15px 25px; display: flex; gap: 25px; font-size: 13px; border-bottom: 2px solid var(--g-blue); position: sticky; top: 0; z-index: 100; }
-        .hot-link { color: #8ab4f8; text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
-        .hot-link:hover { color: white; }
-        .header { background: #1a1a1a; padding: 40px 20px; text-align: center; border-bottom: 1px solid #333; }
-        .empire-total { font-size: 64px; color: var(--g-green); font-weight: 800; margin: 5px 0; font-family: 'Roboto Mono', monospace; }
-        .alpha-badge { background: #137333; color: white; padding: 6px 16px; border-radius: 20px; font-weight: bold; font-size: 14px; }
-        .container { max-width: 1750px; margin: 30px auto; display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 30px; padding: 0 30px; }
-        .card { background: #1e1e1e; border-radius: 12px; border: 1px solid #333; box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden; }
-        .card-header { background: #2d2d2d; padding: 15px 20px; font-weight: bold; border-bottom: 1px solid #333; color: #fff; text-transform: uppercase; font-size: 12px; letter-spacing: 1.5px; }
+        :root { --g-blue: #4285f4; --g-red: #ea4335; --g-yellow: #fbbc05; --g-green: #34a853; --dark: #121212; --border: #333; }
+        body { background: #0a0a0a; font-family: 'Inter', sans-serif; margin: 0; color: #e8eaed; }
+        .top-nav { background: var(--dark); padding: 12px 25px; display: flex; gap: 20px; font-size: 12px; border-bottom: 2px solid var(--g-blue); overflow-x: auto; }
+        .hot-link { color: #8ab4f8; text-decoration: none; font-weight: bold; white-space: nowrap; }
+        .header { background: #1a1a1b; padding: 35px 20px; text-align: center; border-bottom: 1px solid var(--border); }
+        .empire-total { font-size: 52px; color: var(--g-green); font-weight: 800; margin: 5px 0; font-family: 'Roboto Mono', monospace; }
+        .container { max-width: 1750px; margin: 25px auto; display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 25px; padding: 0 25px; }
+        .card { background: #1e1e1e; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.5); }
+        .card-header { background: #2a2a2b; padding: 12px 18px; font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid var(--border); }
         .fin-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-        .fin-table td { padding: 12px 15px; border-bottom: 1px solid #2d2d2d; }
-        .val { font-family: 'Roboto Mono', monospace; font-weight: bold; text-align: right; }
+        .fin-table td { padding: 10px 15px; border-bottom: 1px solid #2d2d2d; }
+        .val { text-align: right; font-family: 'Roboto Mono', monospace; }
         .pos { color: var(--g-green); } .neg { color: var(--g-red); }
-        .news-item { padding: 15px; border-bottom: 1px solid #2d2d2d; font-size: 13px; }
-        .news-item:last-child { border-bottom: none; }
-        .task-item { padding: 12px; border-left: 5px solid var(--g-red); background: #261b1b; margin: 15px; font-size: 13px; border-radius: 4px; }
-        .prof-g { border-left: 5px solid var(--g-yellow); background: #26241b; padding: 20px; font-style: italic; color: #fbbc05; font-size: 14px; }
+        .task-item { padding: 12px; border-left: 4px solid var(--g-yellow); background: #26241b; margin: 15px; border-radius: 4px; font-size: 12.5px; }
+        .news-box { padding: 15px; border-bottom: 1px solid #2d2d2d; font-size: 12.5px; line-height: 1.5; }
     </style>
 </head>
 <body>
 
 <div class="top-nav">
-    <span style="color: #777;">ACCOUNT COMMAND:</span>
-    <a class="hot-link" href="https://client.schwab.com/app/trade/orderstatus/#/orderstatus" target="_blank">Schwab</a>
-    <a class="hot-link" href="https://digitalomni.navyfederal.org/signin" target="_blank">Navy Federal</a>
-    <a class="hot-link" href="https://online.wafdbank.com/p/Dashboard" target="_blank">WaFd Bank</a>
-    <a class="hot-link" href="https://d.comenity.net/ac/dailyadvantagesig/secure/home" target="_blank">AAA Visa</a>
-    <a class="hot-link" href="https://global.americanexpress.com/dashboard" target="_blank">AMEX</a>
-    <a class="hot-link" href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Gmail</a>
+    <a class="hot-link" href="https://client.schwab.com/app/trade/orderstatus/#/orderstatus" target="_blank">SCHWAB ORDERS</a>
+    <a class="hot-link" href="https://digitalomni.navyfederal.org/signin" target="_blank">NFCU BANKING</a>
+    <a class="hot-link" href="https://online.wafdbank.com/p/Dashboard" target="_blank">WAFD BANK</a>
+    <a class="hot-link" href="https://d.comenity.net/ac/dailyadvantagesig/secure/home" target="_blank">AAA VISA</a>
+    <a class="hot-link" href="https://global.americanexpress.com/dashboard" target="_blank">AMEX GOLD</a>
 </div>
 
 <div class="header">
-    <div style="font-size: 12px; font-weight: bold; color: #9aa0a6; letter-spacing: 3px; text-transform: uppercase;">Zahnle Sovereign Command - Empire Status</div>
-    <div class="empire-total">$603,346.85</div>
-    <span class="alpha-badge">Elite Alpha: +144% vs. US Median 48yo (~$247k)</span>
+    <div style="font-size: 11px; font-weight: bold; color: #9aa0a6; letter-spacing: 3px;">ZAHNLE COMMAND DASHBOARD</div>
+    <div class="empire-total" id="netWorth">$603,346.85</div>
+    <div style="color: var(--g-blue); font-weight: bold;">PRE-MARKET: NVDA $180.40 | BRENT CRUDE $107.38</div>
 </div>
 
 <div class="container">
     <div class="col">
         <div class="card">
-            <div class="card-header">The Bits: Schwab Portfolio Summary</div>
+            <div class="card-header">Bits: Schwab Active Holdings</div>
             <table class="fin-table">
-                <tr style="background: #252525;"><td><b>NVDA</b> (155 Shares)</td><td class="val pos">$28,507.60</td></tr>
+                <tr style="background: #252525;"><td><b>NVDA</b> (155 Verified)</td><td class="val">$27,962.00</td></tr>
                 <tr><td><b>MU</b> (Micron)</td><td class="val">$6,157.58</td></tr>
                 <tr><td><b>BLK</b> (BlackRock)</td><td class="val">$4,891.00</td></tr>
-                <tr><td><b>APO</b> (Apollo)</td><td class="val">$3,077.76</td></tr>
-                <tr><td>Cash & Cash Investments</td><td class="val pos">$10,003.03</td></tr>
-                <tr style="border-top: 2px solid #444; background: #2d2d2d;">
-                    <td><b>Total Schwab Value</b></td><td class="val pos"><b>$99,235.87</b></td></tr>
+                <tr><td>Schwab Cash Balance</td><td class="val pos">$10,003.03</td></tr>
+                <tr style="background: #2d2d2d; font-weight: bold;">
+                    <td>Account Total (...902)</td><td class="val pos">$99,235.87</td>
+                </tr>
             </table>
-        </div>
-
-        <div class="card" style="margin-top:30px;">
-            <div class="card-header">Prof G Intelligence</div>
-            <div class="card-content">
-                <div class="prof-g">
-                    "Sovereignty is the ability to spend more time with your family because you've mastered the 'Bits' and protected your 'Atoms'."
-                </div>
-                <div class="news-item">
-                    <b>Market Intel:</b> The Future of Television — Analyzing the shift in consumer media attention[cite: 13].
-                </div>
-                <div class="news-item">
-                    <b>Podcast Alert:</b> Kai Ryssdal guests on the Prof G Podcast to discuss Trump II state capitalism[cite: 11].
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col">
-        <div class="card">
-            <div class="card-header">Global News Brief (Inbox Feed)</div>
-            <div class="news-item">
-                <b style="color: #8ab4f8;">WSJ (Emma Tucker):</b> Israel Hunts Down Iranian Regime Members — Critical guide to the latest exclusive reporting.
-            </div>
-            <div class="news-item">
-                <b style="color: #8ab4f8;">MSN Daily:</b> Shipping in the Strait of Hormuz — How oil tankers are navigating the current blockade.
-            </div>
-            <div class="news-item">
-                <b style="color: #8ab4f8;">TIME Magazine:</b> Four U.S. service members killed as refueling plane crashes in Iraq; analyzing the war costs.
-            </div>
-            <div class="news-item">
-                <b style="color: #8ab4f8;">The Bulwark:</b> "How to Lose Friends and Alienate People" — Geopolitical analysis of Trump's latest diplomatic threats.
-            </div>
-            <div class="news-item">
-                <b style="color: #8ab4f8;">Robert Reich:</b> "Trump Alone" — A note to America's allies and friends on the shifting global order.
-            </div>
         </div>
         
-        <div class="card" style="margin-top:30px;">
-            <div class="card-header">Liquid Capital Shield</div>
-            <table class="fin-table">
-                <tr><td>NFCU Combined Checking</td><td class="val">$59,274.02</td></tr>
-                <tr><td>WaFd Free Checking (...6785)</td><td class="val">$1,026.41</td></tr>
-                <tr><td>AAA Visa Available Credit</td><td class="val pos">$4,530.00</td></tr>
-            </table>
+        <div class="card" style="margin-top:25px;">
+            <div class="card-header">Prof G Intelligence</div>
+            <div class="news-box">
+                <b style="color: var(--g-yellow);">Insight:</b> Scott Galloway predicts AI will drive a "Vera Rubin" platform revolution through 2027.
+            </div>
+            <div class="news-box">
+                "Walk towards the fan: When the shit hits the fan, step forward." — Strategy for tough macro conditions.
+            </div>
         </div>
     </div>
 
     <div class="col">
         <div class="card">
-            <div class="card-header">Strategic Action Items</div>
-            <div class="task-item">
-                <b>VA Tax Waiver:</b> Due April 1. Application for 50% disability rating property tax exemption.
+            <div class="card-header">Global Command Briefing</div>
+            <div class="news-box">
+                <b style="color: var(--g-red);">CRITICAL:</b> Middle East war triggers helium shortage, hitting semiconductor supply chains [Inquirer].
             </div>
-            <div class="task-item">
-                <b>Medicare Leak:</b> STOP THE BLEED. Resolve $316.66 at Asotin Courthouse today.
+            <div class="news-box">
+                <b style="color: var(--g-blue);">ENERGY:</b> Israel strikes Iranian gas hub; Iran retaliates against Qatar export facility [Zacks].
+            </div>
+            <div class="news-box">
+                <b style="color: #8ab4f8;">TECH:</b> NVIDIA GTC 2026 recap — Jensen Huang projects $1T in AI chip demand through 2027.
+            </div>
+            <div class="news-box">
+                <b style="color: #8ab4f8;">FED:</b> Rates held steady at 3.5-3.75%. Only one 2026 cut now projected by Jerome Powell.
+            </div>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="card">
+            <div class="card-header">Active Administrative Targets</div>
+            <div class="task-item" style="border-left-color: var(--g-red);">
+                <b>ASOTIN COURTHOUSE:</b> Open 8AM–5PM today. Resolve $316.66 Medicare leak.
+            </div>
+            <div class="task-item" style="border-left-color: var(--g-red);">
+                <b>VA TAX WAIVER:</b> Due April 1. Requires 50% rating proof for property tax reduction.
             </div>
             <div class="task-item" style="border-left-color: var(--g-green); background: #1b261b;">
-                <b>Quitclaim Deed:</b> SIGNED. Verify recording status with Clarkston City Clerk.
+                <b>QUITCLAIM DEED:</b> Signed. Confirm recording with Clarkston City Clerk.
             </div>
             <div class="task-item" style="border-left-color: var(--g-blue); background: #1b2026;">
-                <b>VR&E Path:</b> Sign "Next Steps" for Darby Gallegos (CSUCI Fall 2026).
+                <b>VR&E:</b> Next steps with Darby Gallegos (Due April 11).
             </div>
         </div>
 
-        <div class="card" style="margin-top:30px;">
-            <div class="card-header">Property & Debt Audit</div>
+        <div class="card" style="margin-top:25px;">
+            <div class="card-header">Property & Debt</div>
             <table class="fin-table">
                 <tr><td>Clarkston Residence (Est)</td><td class="val">$485,000.00</td></tr>
-                <tr class="neg"><td>NFCU Auto Loans (BMW/Etc)</td><td class="val">($56,663.92)</td></tr>
-                <tr class="highlight"><td><b>Total Atoms Equity</b></td><td class="val pos">$428,336.08</td></tr>
+                <tr class="neg"><td>NFCU Auto Loans</td><td class="val">($56,663.92)</td></tr>
+                <tr class="highlight"><td><b>Atoms Equity</b></td><td class="val pos">$428,336.08</td></tr>
             </table>
         </div>
     </div>
