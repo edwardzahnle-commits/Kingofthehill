@@ -2,75 +2,119 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sovereign Command v43.0 - Market Order Verified</title>
+    <title>Sovereign Command v49.0 - Wall Day 1</title>
     <style>
         :root { --g-blue: #4285f4; --g-red: #ea4335; --g-yellow: #fbbc05; --g-green: #34a853; --dark: #121212; --border: #333; }
         body { background: #0a0a0a; font-family: 'Inter', sans-serif; margin: 0; color: #e8eaed; }
         .top-nav { background: var(--dark); padding: 12px 25px; display: flex; gap: 20px; font-size: 12px; border-bottom: 2px solid var(--g-blue); }
-        .hot-link { color: #8ab4f8; text-decoration: none; font-weight: bold; }
+        .hot-link { color: #8ab4f8; text-decoration: none; font-weight: bold; text-transform: uppercase; }
         .header { background: #1a1a1b; padding: 35px 20px; text-align: center; border-bottom: 1px solid var(--border); }
-        .empire-total { font-size: 52px; color: var(--g-green); font-weight: 800; margin: 5px 0; font-family: 'Roboto Mono', monospace; }
+        .empire-total { font-size: 58px; color: var(--g-green); font-weight: 800; margin: 5px 0; font-family: 'Roboto Mono', monospace; }
         .container { max-width: 1750px; margin: 25px auto; display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 25px; padding: 0 25px; }
-        .card { background: #1e1e1e; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.5); overflow: hidden; }
+        .card { background: #1e1e1e; border-radius: 10px; border: 1px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.5); margin-bottom: 25px; }
         .card-header { background: #2a2a2b; padding: 12px 18px; font-weight: bold; font-size: 11px; text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid var(--border); }
         .fin-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-        .fin-table td { padding: 10px 15px; border-bottom: 1px solid #2d2d2d; }
+        .fin-table td { padding: 12px 15px; border-bottom: 1px solid #2d2d2d; }
         .val { text-align: right; font-family: 'Roboto Mono', monospace; }
         .pos { color: var(--g-green); } .neg { color: var(--g-red); }
-        .trade-alert { padding: 15px; background: #1b2026; border-left: 5px solid var(--g-blue); margin: 15px; font-size: 13px; font-weight: bold; }
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 15px; }
+        .stat-box { background: #252526; padding: 10px; border-radius: 5px; text-align: center; border: 1px solid #333; }
+        .news-box { padding: 15px; font-size: 12.5px; border-bottom: 1px solid #2d2d2d; line-height: 1.5; }
     </style>
 </head>
 <body>
 
 <div class="top-nav">
-    <a class="hot-link" href="https://client.schwab.com/app/trade/orderstatus/#/orderstatus" target="_blank">ACTIVE ORDERS</a>
-    <a class="hot-link" href="https://mail.google.com/mail/u/0/#inbox" target="_blank">GMAIL STRATEGY</a>
+    <a class="hot-link" href="https://client.schwab.com/app/accounts/positions/#/" target="_blank">Schwab Live</a>
+    <a class="hot-link" href="https://digitalomni.navyfederal.org/signin" target="_blank">NFCU</a>
+    <a class="hot-link" href="https://online.wafdbank.com/p/Dashboard" target="_blank">WaFd</a>
+    <a class="hot-link" href="https://mail.google.com/mail/u/0/#inbox" target="_blank">Gmail</a>
 </div>
 
 <div class="header">
-    <div style="font-size: 11px; font-weight: bold; color: #9aa0a6; letter-spacing: 3px;">LIVE ORDER EXECUTION MODE</div>
+    <div style="font-size: 11px; font-weight: bold; color: #9aa0a6; letter-spacing: 3px;">ZAHNLE SOVEREIGN COMMAND</div>
     <div class="empire-total">$603,346.85</div>
-    <div style="color: var(--g-blue); font-weight: bold;">NVDA CURRENT BID: $179.96 | ASK: $180.05</div>
+    <div style="color: var(--g-blue); font-weight: bold;">NVDA VERIFIED: 210 SHARES | MKT VAL: $36,729.00</div>
 </div>
 
 <div class="container">
     <div class="col">
         <div class="card">
-            <div class="card-header">Current Bits Inventory</div>
+            <div class="card-header">Schwab Portfolio Snapshot</div>
             <table class="fin-table">
-                <tr style="background: #252525;"><td>NVDA (Existing)</td><td class="val">155 Shares</td></tr>
-                <tr><td>MU (Micron)</td><td class="val">13 Shares</td></tr>
-                <tr style="background: #2d2d2d; font-weight: bold;"><td>Schwab Liquidity</td><td class="val pos">$10,003.03</td></tr>
+                <tr style="background: #252525;"><td><b>NVDA</b> (NVIDIA)</td><td class="val">210 Shares</td></tr>
+                <tr><td><b>BLK</b> (BlackRock)</td><td class="val">5 Shares</td></tr>
+                <tr><td><b>MU</b> (Micron)</td><td class="val">13 Shares</td></tr>
+                <tr><td><b>OWL</b> (Blue Owl)</td><td class="val">335 Shares</td></tr>
+                <tr style="background: #2d2d2d; font-weight: bold;">
+                    <td>Total Account (...902)</td><td class="val pos">$85,780.92</td>
+                </tr>
             </table>
         </div>
+
+        <div class="card">
+            <div class="card-header">Sovereign Comparison (Age 48)</div>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div style="font-size: 10px; color: #9aa0a6;">YOU (LIQUID)</div>
+                    <div style="font-size: 16px; font-weight: bold;">$102.6K</div>
+                </div>
+                <div class="stat-box">
+                    <div style="font-size: 10px; color: #9aa0a6;">US MEDIAN</div>
+                    <div style="font-size: 16px; font-weight: bold; color: var(--g-red);">$247.2K*</div>
+                </div>
+            </div>
+            <div style="padding: 0 15px 15px; font-size: 10px; color: #777;">*Median includes Home Equity. You are elite in liquid "Bits".</div>
+        </div>
     </div>
 
     <div class="col">
         <div class="card">
-            <div class="card-header">Immediate Market Moves</div>
-            <div class="trade-alert">
-                PENDING MARKET BUY: 28 NVDA (NVIDIA CORP)<br>
-                <small style="font-weight: normal; color: #8ab4f8;">Created 4:31 AM ET | Timing: Day</small>
+            <div class="card-header">Global Command & Buffett Brief</div>
+            <div class="news-box">
+                <b style="color: var(--g-yellow);">Warren Buffett:</b> Berkshire sits on $373B cash. Greg Abel just dumped $25M into BRK.A. The signal? Buy the engine, ignore the noise.
             </div>
-            <div class="trade-alert" style="border-left-color: var(--g-yellow);">
-                PENDING MARKET BUY: 29 LYG (LLOYDS BANKING)<br>
-                <small style="font-weight: normal; color: #8ab4f8;">Created 4:33 AM ET | Bid: $5.01</small>
+            <div class="news-box">
+                <b style="color: var(--g-blue);">Prof G (Galloway):</b> "Data Center Bubble" fears are high, but AI Inference is the real 2026 play. Amazon is his pick; NVDA is the picks-and-shovels king.
+            </div>
+            <div class="news-box">
+                <b style="color: var(--g-red);">GEOPOLITICAL:</b> G7 condemns Iranian "de facto closure" of the Strait of Hormuz. Energy hedge active.
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">Market Order Alert</div>
+            <div style="padding: 15px; background: #261b1b; border-left: 5px solid var(--g-red);">
+                <b>LIMIT BUY:</b> 40 NVDA @ $169.00<br>
+                <small>Targeting 250 Total Shares</small>
             </div>
         </div>
     </div>
 
     <div class="col">
         <div class="card">
-            <div class="card-header">Atoms: Thursday Targets</div>
-            <div style="padding: 15px; font-size: 13px; line-height: 1.6;">
-                <b class="neg">• Medicare Leak:</b> $316.66 at Asotin Courthouse.<br>
-                <b class="pos">• Quitclaim:</b> Signed. Confirm recording.<br>
-                <b style="color: var(--g-blue);">• VR&E Path:</b> Next steps (Darby Gallegos).
+            <div class="card-header">Atoms: Physical Operations</div>
+            <div style="padding: 15px;">
+                <b style="color: var(--g-yellow);">• WALL PROJECT:</b> DAY 1 (Delayed/Backed Up). Stand by for contractor.
             </div>
+            <div style="padding: 15px; border-top: 1px solid #333;">
+                <b style="color: var(--g-red);">• MEDICARE LEAK:</b> $316.66 at Asotin Courthouse today. Kill the drain.
+            </div>
+            <div style="padding: 15px; border-top: 1px solid #333;">
+                <b style="color: var(--g-green);">• FOR SALE:</b> BMW 430xi & 1998 Dodge Ram. Convert "Atoms" to "Bits".
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">Property Valuation</div>
+            <table class="fin-table">
+                <tr><td>Clarkston Residence</td><td class="val">$485,000.00</td></tr>
+                <tr class="neg"><td>NFCU Debt (Auto)</td><td class="val">($56,663.92)</td></tr>
+                <tr style="background: #2d2d2d;"><td><b>Net Atoms Equity</b></td><td class="val pos">$428,336.08</td></tr>
+            </table>
         </div>
     </div>
 </div>
 
 </body>
-</html>
 </html>
