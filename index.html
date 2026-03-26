@@ -2,60 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Sovereign Command v58.0 - Launch Phase</title>
+    <title>Sovereign Command v63.0 - Infrastructure Build</title>
     <style>
         :root { --g-blue: #4285f4; --g-red: #ea4335; --g-green: #34a853; --dark: #121212; --border: #333; }
-        body { background: #0a0a0a; font-family: 'Inter', sans-serif; margin: 0; color: #e8eaed; }
-        .header { background: #1a1a1b; padding: 35px; text-align: center; border-bottom: 3px solid var(--g-blue); }
-        .empire-total { font-size: 62px; color: var(--g-green); font-weight: 800; font-family: 'Roboto Mono', monospace; }
-        .container { max-width: 1600px; margin: 25px auto; display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 25px; padding: 0 25px; }
-        .card { background: #1e1e1e; border: 1px solid var(--border); border-radius: 12px; padding: 25px; }
-        .card-header { font-size: 11px; text-transform: uppercase; color: #9aa0a6; letter-spacing: 3px; margin-bottom: 20px; border-bottom: 1px solid #333; padding-bottom: 10px; }
-        .stat-line { display: flex; justify-content: space-between; margin-bottom: 15px; font-size: 15px; }
+        body { background: #0a0a0a; font-family: 'Inter', sans-serif; margin: 0; color: #e8eaed; font-size: 13px; }
+        .header { background: #1a1a1b; padding: 40px; text-align: center; border-bottom: 4px solid var(--g-blue); }
+        .empire-total { font-size: 64px; color: var(--g-green); font-weight: 800; font-family: 'Roboto Mono', monospace; }
+        .container { max-width: 1750px; margin: 25px auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 25px; padding: 0 25px; }
+        .card { background: #1e1e1e; border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+        .card-header { font-size: 11px; text-transform: uppercase; color: #9aa0a6; letter-spacing: 3px; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 8px; }
+        .stat-line { display: flex; justify-content: space-between; margin-bottom: 12px; }
         .val { font-family: 'Roboto Mono', monospace; font-weight: bold; }
-        .status-pill { padding: 4px 10px; border-radius: 20px; font-size: 10px; font-weight: bold; text-transform: uppercase; }
-        .done { background: var(--g-green); color: #000; }
-        .active { background: #fbbc05; color: #000; }
+        .neg { color: var(--g-red); } .pos { color: var(--g-green); }
     </style>
 </head>
 <body>
 
 <div class="header">
-    <div style="font-size: 12px; font-weight: bold; color: #9aa0a6; letter-spacing: 4px;">ZAHNLE EMPIRE: LIQUID BITS</div>
-    <div class="empire-total">$108,821.06</div>
-    <div style="color: var(--g-green); font-weight: bold; margin-top: 10px;">DAY CHANGE: +$1,276.67 (LIVE)</div>
+    <div style="font-size: 12px; font-weight: bold; color: #9aa0a6; letter-spacing: 5px;">ZAHNLE EMPIRE: NET WORTH & INFRASTRUCTURE</div>
+    <div class="empire-total">$558,727.81</div>
+    <div style="color: #9aa0a6; margin-top: 10px;">Bits: $107,727 | Atoms (Equity): $451,000</div>
 </div>
 
 <div class="container">
     <div class="card">
-        <div class="card-header">Top Assets</div>
-        <div class="stat-line"><span>NVDA (250 Shares)</span> <span class="val">$44,673.25</span></div>
-        <div class="stat-line"><span>MU (13 Shares)</span> <span class="val">$4,962.36</span></div>
-        <div class="stat-line"><span>BLK (5 Shares)</span> <span class="val">$4,886.63</span></div>
-        <div class="stat-line"><span>APO (28 Shares)</span> <span class="val">$3,149.16</span></div>
-        <hr style="border:0; border-top:1px solid #333; margin: 20px 0;">
-        <div class="stat-line" style="color: var(--g-blue);"><span>Individual ...902</span> <span class="val">$94,132.94</span></div>
+        <div class="card-header">Liquid Bits (Schwab Live)</div>
+        <div class="stat-line"><span>NVDA (250 Shares)</span> <span class="val">$44,172.50</span></div>
+        <div class="stat-line"><span>BLK (5 Shares)</span> <span class="val">$4,857.75</span></div>
+        <div class="stat-line"><span>MU (13 Shares)</span> <span class="val">$4,838.08</span></div>
+        <div class="stat-line"><span>APO (28 Shares)</span> <span class="val">$3,021.76</span></div>
+        <div class="stat-line"><span>OWL (335 Shares)</span> <span class="val">$2,984.85</span></div>
+        <hr style="border:0; border-top:1px solid #333; margin: 15px 0;">
+        <div class="stat-line" style="font-weight:bold; color:var(--g-blue);"><span>Individual (...902)</span> <span class="val">$92,961.93</span></div>
+        <div class="stat-line" style="font-weight:bold; color:var(--g-blue);"><span>Roth IRA (...092)</span> <span class="val">$14,765.88</span></div>
     </div>
 
     <div class="card">
-        <div class="card-header">Estate Milestones</div>
-        <div class="stat-line"><span>Deed Processed</span> <span class="status-pill done">COMPLETE</span></div>
-        <div class="stat-line"><span>Medicare/Tax Relief</span> <span class="status-pill done">COMPLETE</span></div>
-        <div class="stat-line"><span>NVDA Target Alert</span> <span class="val">$212.00</span></div>
-        <div style="margin-top: 30px; padding: 15px; background: #252526; border-radius: 8px; font-size: 13px;">
-            <b>Prof G Insight:</b> "The greatest increase in value from AI will occur in companies that use it." You own the source (NVDA). Now go build the wall.
-        </div>
+        <div class="card-header">Project: Wall/Drive/Trees</div>
+        <div class="stat-line"><span>Total Project Cost</span> <span class="val neg">-$45,000</span></div>
+        <div class="stat-line"><span>Home/Lot Value</span> <span class="val">$600,000</span></div>
+        <div class="stat-line"><span>Mortgage Debt</span> <span class="val neg">-$183,000</span></div>
+        <hr style="border:0; border-top:1px solid #333; margin: 15px 0;">
+        <div class="stat-line" style="font-weight:bold; color:var(--g-green);"><span>Current Home Equity</span> <span class="val">$372,000</span></div>
+        <div style="margin-top: 15px; font-size: 11px; color: #9aa0a6;">Note: $45k spend is an investment into the $600k asset base.</div>
     </div>
 
-    <div class="card" style="border-left: 5px solid #fbbc05;">
-        <div class="card-header">Project Operations</div>
-        <div style="font-size: 20px; font-weight: bold; margin-bottom: 5px;">WALL & DRIVEWAY</div>
-        <div style="font-size: 12px; color: #fbbc05; margin-bottom: 20px;">DAY 3 — ACTIVE BUILD</div>
-        <div class="stat-line"><span>BMW 430xi</span> <span class="status-pill active">QUEUED</span></div>
-        <div class="stat-line"><span>1998 Dodge Ram</span> <span class="status-pill active">QUEUED</span></div>
+    <div class="card">
+        <div class="card-header">Machinery & Vehicle Fleet</div>
+        <div class="stat-line"><span>2025 Ram Laramie SST</span> <span class="val">$41,000</span></div>
+        <div class="stat-line"><span>BMW 430xi / 1998 Ram</span> <span class="val">$31,500</span></div>
+        <div class="stat-line"><span>Bobcat</span> <span class="val">$15,000</span></div>
+        <div class="stat-line"><span>Dump Trailer</span> <span class="val">$6,000</span></div>
+        <div class="stat-line"><span>2015 4Runner Equity</span> <span class="val pos">$10,000</span></div>
+        <hr style="border:0; border-top:1px solid #333; margin: 15px 0;">
+        <div style="font-size: 13px; line-height: 1.5; background: #252526; padding: 15px; border-radius: 8px;">
+            <b>The "Owner-Builder" Advantage:</b> By using your own **Bobcat** and **Dump Trailer** while "helping" with the work, you are effectively paying yourself a laborer's wage in the form of equity preservation. 
+        </div>
     </div>
 </div>
 
 </body>
-</html>
 </html>
